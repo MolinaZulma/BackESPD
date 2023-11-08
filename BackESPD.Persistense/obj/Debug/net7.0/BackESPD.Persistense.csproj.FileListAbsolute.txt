@@ -1,0 +1,17 @@
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.deps.json
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Application.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Application.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.AssemblyReference.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.AssemblyInfoInputs.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.AssemblyInfo.cs
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.CoreCompileInputs.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.CopyComplete
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\refint\BackESPD.Persistense.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\ref\BackESPD.Persistense.dll

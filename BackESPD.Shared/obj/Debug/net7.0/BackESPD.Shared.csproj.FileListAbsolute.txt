@@ -1,0 +1,17 @@
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Shared.deps.json
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Shared.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Shared.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Application.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Application.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\bin\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.csproj.AssemblyReference.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.AssemblyInfoInputs.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.AssemblyInfo.cs
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.csproj.CopyComplete
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\refint\BackESPD.Shared.dll
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\BackESPD.Shared.pdb
+C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Shared\obj\Debug\net7.0\ref\BackESPD.Shared.dll

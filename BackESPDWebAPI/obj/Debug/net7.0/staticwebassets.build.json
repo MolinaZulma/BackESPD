@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9aeln22yrDxeMNAof1nHrJd0DTQNHnn5j3Pz2Sho1ZM=",
+  "Source": "BackESPDWebAPI",
+  "BasePath": "_content/BackESPDWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

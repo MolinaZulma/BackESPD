@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BackESPD.Application",
+    "\\BackESPD.Domain",
+    "\\BackESPD.Persistense",
+    "\\BackESPD.Shared",
+    "\\BackESPDWebAPI"
+  ],
+  "SelectedNode": "\\BackESPD.Application",
+  "PreviewInSolutionExplorer": false
+}

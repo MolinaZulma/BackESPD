@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "BackESPD.Shared/1.0.0": {
+        "dependencies": {
+          "BackESPD.Application": "1.0.0"
+        },
+        "runtime": {
+          "BackESPD.Shared.dll": {}
+        }
+      },
+      "BackESPD.Application/1.0.0": {
+        "dependencies": {
+          "BackESPD.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BackESPD.Application.dll": {}
+        }
+      },
+      "BackESPD.Domain/1.0.0": {
+        "runtime": {
+          "BackESPD.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BackESPD.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BackESPD.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BackESPD.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
