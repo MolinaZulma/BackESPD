@@ -9,6 +9,7 @@ namespace BackESPD.Domain.Entities
         public string Image {  get; set; }
         public string TrueInformation {  get; set; }
         public string TypeDamage { get; set; }
+        public int IdUser {  get; set; }
     }
 
 }
