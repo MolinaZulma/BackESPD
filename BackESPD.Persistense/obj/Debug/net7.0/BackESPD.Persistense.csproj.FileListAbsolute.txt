@@ -15,3 +15,22 @@ C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\B
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\refint\BackESPD.Persistense.dll
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.pdb
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\ref\BackESPD.Persistense.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.deps.json
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.runtimeconfig.json
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Persistense.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Application.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Application.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\bin\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.AssemblyReference.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.AssemblyInfoInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.AssemblyInfo.cs
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.CoreCompileInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.csproj.CopyComplete
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\refint\BackESPD.Persistense.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\BackESPD.Persistense.genruntimeconfig.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Persistense\obj\Debug\net7.0\ref\BackESPD.Persistense.dll

@@ -1,5 +1,4 @@
 ﻿using BackESPD.Domain.BaseEntity;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackESPD.Domain.Entities
 {
@@ -8,7 +7,10 @@ namespace BackESPD.Domain.Entities
         public string TypePlant {  get; set; }
         public string Direction { get; set; }
         public string Description { get; set; }
-        [ForeignKey("Id")]
-        public FormatPTAPForm formatPTAPForm { get; set; }
+        public FormatPTAPForm FormatPTAPForm { get; set; }
+        public ActivityLogsForm ActivityLogsForm { get; set; }
+        public JarFormatForm JarFormatForm { get; set; }
+        public SampleForm SampleForm { get; set; }
+        public WaterControlForm WaterControlForm { get; set; }
     }
 }

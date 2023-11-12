@@ -11,19 +11,25 @@ namespace BackESPD.Persistense.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.ToTable(nameof(FormatPTAPForm));
-            builder.Property(P => P.Date);
-            builder.Property(P => P.TypeWater);
-            builder.Property(P => P.Temperature);
-            builder.Property(P => P.AlkalinityPh);
-            builder.Property(P => P.AlkalineChlorine);
-            builder.Property(P => P.AlkalineInitialReading);
-            builder.Property(P => P.AlkalineFinalReading);
-            builder.Property(P => P.AlkalineTotal);
-            builder.Property(P => P.Alkaline);
-            builder.Property(P => P.ChlorineGas);
-            builder.Property(P => P.ParticlesPerMillion);
-            builder.Property(P => P.IdUser);
-            builder.Property(P => P.IdPlant);
+            builder.Property(P => P.Date).IsRequired();
+            builder.Property(P => P.TypeWater).IsRequired();
+            builder.Property(P => P.Temperature).IsRequired();
+            builder.Property(P => P.AlkalinityPh).IsRequired();
+            builder.Property(P => P.AlkalineChlorine).IsRequired();
+            builder.Property(P => P.AlkalineInitialReading).IsRequired();
+            builder.Property(P => P.AlkalineFinalReading).IsRequired();
+            builder.Property(P => P.AlkalineTotal).IsRequired();
+            builder.Property(P => P.Alkaline).IsRequired();
+            builder.Property(P => P.ChlorineGas).IsRequired();
+            builder.Property(P => P.ParticlesPerMillion).IsRequired();
+
+            builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.FormatPTAPForms)
+                .HasForeignKey(p => p.IdUser)
+                .HasPrincipalKey(p => p.Id);
+
+            builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.FormatPTAPForm)
+                .HasForeignKey<FormatPTAPForm>(p => p.IdPlant)
+                .HasPrincipalKey<Plant>(p => p.Id);
 
 
 

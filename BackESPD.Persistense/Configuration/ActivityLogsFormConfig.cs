@@ -1,7 +1,6 @@
 ﻿using BackESPD.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BackESPD.Persistense.Configuration
 {
@@ -11,11 +10,17 @@ namespace BackESPD.Persistense.Configuration
         {
            builder.HasKey(x => x.Id);
            builder.ToTable(nameof(ActivityLogsForm));
-           builder.Property(P => P.Date);
-           builder.Property(P => P.TypeActivity).HasMaxLength(300);
-           builder.Property(P => P.Observations).HasMaxLength(300);
-           builder.Property(P => P.IdUser);
-           builder.Property(P => P.IdPlant);
+           builder.Property(P => P.Date).IsRequired();
+           builder.Property(P => P.TypeActivity).HasMaxLength(300).IsRequired();
+           builder.Property(P => P.Observations).HasMaxLength(300).IsRequired();
+
+           builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.ActivityLogsForm)
+               .HasForeignKey(p => p.IdUser)
+               .HasPrincipalKey(p => p.Id);
+
+            builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.ActivityLogsForm)
+                .HasForeignKey<ActivityLogsForm>(p => p.IdPlant)
+                .HasPrincipalKey<Plant>(p => p.Id);
         }
     }
 }

@@ -9,8 +9,11 @@ namespace BackESPD.Domain.Entities
         public double MediumFlow {  get; set; }
         public double TemperatureC {  get; set; }
         public double Ph { get; set;}
-        public double CreamWeightKilos {  get; set; }
+        public double CreamWeightKilos {  get; set; }   
         public double SiftingWeightKilos {  get; set; }
-        public int IdUser {  get; set; }
+        public string IdUser {  get; set; }
+        public User IdUserNavigation { get; set; }
+        public int IdPlant { get; set; }
+        public virtual Plant IdPlantNavigation { get; set; }
     }
 }

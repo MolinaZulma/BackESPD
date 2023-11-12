@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj": {}
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj",
+        "projectUniqueName": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj",
         "projectName": "BackESPD.Application",
-        "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj",
-        "packagesPath": "C:\\Users\\Mi Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\obj\\",
+        "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj",
+        "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mi Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj"
               }
             }
           }
@@ -63,24 +64,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj",
         "projectName": "BackESPD.Domain",
-        "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj",
-        "packagesPath": "C:\\Users\\Mi Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\obj\\",
+        "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj",
+        "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mi Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -89,6 +90,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -128,24 +130,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj": {
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj",
+        "projectUniqueName": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj",
         "projectName": "BackESPD.Persistense",
-        "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj",
-        "packagesPath": "C:\\Users\\Mi Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\obj\\",
+        "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj",
+        "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mi Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -154,17 +156,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
               },
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Domain\\BackESPD.Domain.csproj"
               }
             }
           }
@@ -190,6 +193,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
             },
@@ -220,24 +227,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj": {
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj",
         "projectName": "BackESPD.Shared",
-        "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj",
-        "packagesPath": "C:\\Users\\Mi Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\obj\\",
+        "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj",
+        "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mi Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -246,14 +253,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
               }
             }
           }
@@ -283,24 +291,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj": {
+    "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj",
         "projectName": "BackESPDWebAPI",
-        "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj",
-        "packagesPath": "C:\\Users\\Mi Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPDWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPDWebAPI\\BackESPDWebAPI.csproj",
+        "packagesPath": "C:\\Users\\marit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPDWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mi Equipo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -309,20 +317,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Application\\BackESPD.Application.csproj"
               },
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Persistense\\BackESPD.Persistense.csproj"
               },
-              "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj": {
-                "projectPath": "C:\\Users\\Mi Equipo\\source\\repos\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj"
+              "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj": {
+                "projectPath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj"
               }
             }
           }
@@ -338,6 +347,18 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
             },
@@ -365,7 +386,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

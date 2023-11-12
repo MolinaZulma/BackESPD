@@ -9,3 +9,15 @@ C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackES
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Domain\obj\Debug\net7.0\refint\BackESPD.Domain.dll
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.pdb
 C:\Users\Mi Equipo\source\repos\BackESPD\BackESPD.Domain\obj\Debug\net7.0\ref\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\bin\Debug\net7.0\BackESPD.Domain.deps.json
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\bin\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\bin\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.csproj.AssemblyReference.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.AssemblyInfoInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.AssemblyInfo.cs
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\refint\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.Domain\obj\Debug\net7.0\ref\BackESPD.Domain.dll

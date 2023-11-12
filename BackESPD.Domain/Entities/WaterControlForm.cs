@@ -1,9 +1,8 @@
-﻿using System.Runtime.ConstrainedExecution;
-
-namespace BackESPD.Domain.Entities
+﻿namespace BackESPD.Domain.Entities
 {
     public class WaterControlForm
     {
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public double TotalHours { get; set; }
         public double AmountWaterCaptured { get; set; }
@@ -12,8 +11,9 @@ namespace BackESPD.Domain.Entities
         public double SodiumHypochlorite { get; set; }
         public double ChlorineGas { get; set; }
         public double ParticlesPerMillion { get; set; }
-        public int IdUser { get; set; }
+        public string IdUser { get; set; }
+        public User IdUserNavigation { get; set; }
         public int IdPlant { get; set; }
-        public virtual Plant IdPlantNavigation {  get; set; }
+        public virtual Plant IdPlantNavigation { get; set; }
     }
 }

@@ -15,9 +15,9 @@ namespace BackESPD.Persistense.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.ToTable(nameof(Plant));
-            builder.Property(p => p.TypePlant).HasMaxLength(15);
-            builder.Property(p => p.Direction).HasMaxLength(50);
-            builder.Property(p => p.Description).HasMaxLength(200);
+            builder.Property(p => p.TypePlant).HasMaxLength(15).IsRequired();
+            builder.Property(p => p.Direction).HasMaxLength(50).IsRequired();
+            builder.Property(p => p.Description).HasMaxLength(200).IsRequired();
         }
     }
 }
