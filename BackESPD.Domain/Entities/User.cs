@@ -12,6 +12,7 @@ namespace BackESPD.Domain.Entities
         public virtual ICollection<JarFormatForm> JarFormatForm { get; } = new List<JarFormatForm>();
         public virtual ICollection<SampleForm> SampleForm { get; } = new List<SampleForm>();
         public virtual ICollection<WaterControlForm> WaterControlForm { get; } = new List<WaterControlForm>();
+        public virtual ICollection<DamageReport> DamageReport { get; } = new List<DamageReport>();
 
     }
 }

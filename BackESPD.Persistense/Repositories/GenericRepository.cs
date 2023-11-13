@@ -1,6 +1,7 @@
-﻿using BackESPD.Application.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using BackESPD.Application.Interfaces;
 using BackESPD.Persistense.DbContext;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Linq.Expressions;
 
 namespace BackESPD.Persistense.Repositories

@@ -78,17 +78,13 @@ namespace BackESPD.Persistense.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
+                    b.Property<string>("IdUser")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("TrueInformation")
                         .IsRequired()
@@ -101,6 +97,8 @@ namespace BackESPD.Persistense.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdUser");
 
                     b.ToTable("DamageReport", (string)null);
                 });
@@ -565,6 +563,17 @@ namespace BackESPD.Persistense.Migrations
                     b.Navigation("IdUserNavigation");
                 });
 
+            modelBuilder.Entity("BackESPD.Domain.Entities.DamageReport", b =>
+                {
+                    b.HasOne("BackESPD.Domain.Entities.User", "IdUserNavigation")
+                        .WithMany("DamageReport")
+                        .HasForeignKey("IdUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IdUserNavigation");
+                });
+
             modelBuilder.Entity("BackESPD.Domain.Entities.FormatPTAPForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
@@ -713,6 +722,8 @@ namespace BackESPD.Persistense.Migrations
             modelBuilder.Entity("BackESPD.Domain.Entities.User", b =>
                 {
                     b.Navigation("ActivityLogsForm");
+
+                    b.Navigation("DamageReport");
 
                     b.Navigation("FormatPTAPForms");
 

@@ -1,5 +1,7 @@
 using BackESPD.Persistense;
 using BackESPDWebAPI.Extensions;
+using BackESPD.Application;
+; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +12,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 //Services
+builder.Services.AddIOCApplicationLayer();
 builder.Services.AddIOCPersintenceLayer(builder.Configuration);
 builder.Services.AddApiVesionExtensions();
+builder.Services.AddApiVesionExtensions();
+
+
+
+/*
+builder.Services.AddIOCApplicationLayerJWTDocumentation();
+builder.Services.AddIOCApplicationLayer();
+builder.Services.AddIOCPersintenceLayer(builder.Configuration);
+builder.Services.AddIOCSendEmailLayer(builder.Configuration);
+builder.Services.AddIOCSharedLayer();
+builder.Services.AddApiVesionExtensions();
+*/
 
 var app = builder.Build();
 
@@ -26,7 +43,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseErrorHandlingMiddleware();
 app.MapControllers();
 
 app.Run();

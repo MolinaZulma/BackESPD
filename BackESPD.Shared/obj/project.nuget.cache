@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7f/4ilsuD76TBiBciN+ntILpnYih1yg2YF3Vq0TAESbUCmQQ8ypJgyYGNt+R/7PiH8t8KuFC2QzmfktOUjWaRw==",
+  "dgSpecHash": "XN0iDeUhlVbf+rsZaEsNwmmbz/9Mwf5STJxoIiolMSflBIpJ7t4gT6e+t/kkXHR/FV+v2I3/ujsRgwvDKGxMOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marit\\Escritorio\\BackESPD\\BackESPD.Shared\\BackESPD.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marit\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\marit\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\marit\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\marit\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\marit\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
