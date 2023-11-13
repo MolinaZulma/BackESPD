@@ -20,7 +20,11 @@ builder.Services.AddIOCPersintenceLayer(builder.Configuration);
 builder.Services.AddApiVesionExtensions();
 builder.Services.AddApiVesionExtensions();
 
-
+//Configuración de CORS
+builder.Services.AddCors(p => p.AddPolicy("PolicyCors", build =>
+{
+    build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 /*
 builder.Services.AddIOCApplicationLayerJWTDocumentation();
@@ -41,7 +45,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors("PolicyCors");
 app.UseAuthorization();
 app.UseErrorHandlingMiddleware();
 app.MapControllers();
