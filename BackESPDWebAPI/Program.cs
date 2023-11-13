@@ -1,5 +1,5 @@
 using BackESPD.Persistense;
-
+using BackESPDWebAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 //Services
 builder.Services.AddIOCPersintenceLayer(builder.Configuration);
-
+builder.Services.AddApiVesionExtensions();
 
 var app = builder.Build();
 

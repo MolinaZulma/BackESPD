@@ -26,4 +26,8 @@
     <ProjectReference Include="..\BackESPD.Domain\BackESPD.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
