@@ -8,7 +8,7 @@ namespace BackESPD.Persistense.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-           builder.Property(P => P.NationalIdentificationNumber).HasMaxLength(15).IsRequired();
+           builder.HasAlternateKey(P => P.NationalIdentificationNumber);
            builder.Property(P => P.FullName).HasMaxLength(300).IsRequired();
 
         }

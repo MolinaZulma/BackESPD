@@ -18,7 +18,7 @@ namespace BackESPD.Persistense.Configuration
 
             builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.DamageReport)
                .HasForeignKey(p => p.IdUser)
-               .HasPrincipalKey(p => p.Id);
+               .HasPrincipalKey(p => p.NationalIdentificationNumber);
         }
     }
 }

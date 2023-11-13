@@ -4,6 +4,7 @@ using BackESPD.Persistense.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackESPD.Persistense.Migrations
 {
     [DbContext(typeof(BackESPDDbContext))]
-    partial class BackESPDDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231113200053_cambioRelacionDamageReportUserPorNationalIdentificationNumber")]
+    partial class cambioRelacionDamageReportUserPorNationalIdentificationNumber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
