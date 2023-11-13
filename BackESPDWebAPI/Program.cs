@@ -1,7 +1,7 @@
 using BackESPD.Persistense;
 using BackESPDWebAPI.Extensions;
 using BackESPD.Application;
-; 
+using BackESPD.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 
 
 //Services
@@ -19,6 +17,8 @@ builder.Services.AddIOCApplicationLayer();
 builder.Services.AddIOCPersintenceLayer(builder.Configuration);
 builder.Services.AddApiVesionExtensions();
 builder.Services.AddApiVesionExtensions();
+builder.Services.AddIOCApplicationLayerJWTDocumentation();
+builder.Services.AddIOCSharedLayer();
 
 //Configuración de CORS
 builder.Services.AddCors(p => p.AddPolicy("PolicyCors", build =>
@@ -46,6 +46,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("PolicyCors");
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseErrorHandlingMiddleware();
 app.MapControllers();

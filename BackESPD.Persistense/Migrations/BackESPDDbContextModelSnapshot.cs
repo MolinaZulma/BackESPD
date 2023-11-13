@@ -70,13 +70,13 @@ namespace BackESPD.Persistense.Migrations
 
                     b.Property<string>("AddressDamage")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
 
                     b.Property<string>("DescriptionDamage")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("IdUser")
                         .IsRequired()
@@ -360,6 +360,88 @@ namespace BackESPD.Persistense.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "a26df1b9-d21d-49c4-82c2-19273db7e63d",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c020a2df-daea-45b9-9955-65152ee03144",
+                            Email = "mar@gmail.com",
+                            EmailConfirmed = false,
+                            FullName = "mar",
+                            LockoutEnabled = false,
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 7, 24, 45, 3, DateTimeKind.Unspecified).AddTicks(2517), new TimeSpan(0, 0, 0, 0, 0)),
+                            NationalIdentificationNumber = "1017182914",
+                            NormalizedEmail = "MAR@GMAIL.COM",
+                            NormalizedUserName = "MAR@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGuL/ohcKzSabSmo55ouC0dzK/liJb7SHJCbPtktWsIBZf+pt7Xgj6r6ItB8QG3THw==",
+                            PhoneNumber = "11111111",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "958f6ef6-15b2-41b5-92db-e6acf5f56781",
+                            TwoFactorEnabled = false,
+                            UserName = "mar@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "671949f9-d6de-40ed-8dff-e2375898da77",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2eed8265-8ff3-480d-8330-5679ab8723bb",
+                            Email = "esteban@gmail.com",
+                            EmailConfirmed = false,
+                            FullName = "esteban",
+                            LockoutEnabled = false,
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 7, 24, 45, 3, DateTimeKind.Unspecified).AddTicks(2599), new TimeSpan(0, 0, 0, 0, 0)),
+                            NationalIdentificationNumber = "1017123503",
+                            NormalizedEmail = "ESTEBAN@GMAIL.COM",
+                            NormalizedUserName = "ESTEBAN@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEmLrvE/xpLOKPQtHp0Mcu/8/MepU2uhzkq6b5pE9hpuMFvQXVs2cSZDGvTOEKsqLw==",
+                            PhoneNumber = "11111111",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "fc999bd3-5478-475e-9f72-304f482cd326",
+                            TwoFactorEnabled = false,
+                            UserName = "esteban@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "89def332-2344-49aa-ba69-3191c58df683",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "400602b9-8a40-4c76-9723-27ebef894c9b",
+                            Email = "sara@gmail.com",
+                            EmailConfirmed = false,
+                            FullName = "sara",
+                            LockoutEnabled = false,
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 7, 24, 45, 3, DateTimeKind.Unspecified).AddTicks(2611), new TimeSpan(0, 0, 0, 0, 0)),
+                            NationalIdentificationNumber = "1017123700",
+                            NormalizedEmail = "SARA@GMAIL.COM",
+                            NormalizedUserName = "SARA@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEACwt8MmGZl6WzB4XrD9CTjlghUSthPad7l4Uk9Bz6lOuOpLAwotZuBmHkurodgGsg==",
+                            PhoneNumber = "11111111",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e0754902-ed60-40bd-a302-3969c594f247",
+                            TwoFactorEnabled = false,
+                            UserName = "sara@gmail.com"
+                        },
+                        new
+                        {
+                            Id = "27864f56-63c2-461b-9fc9-432b146e0c2c",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b632fed7-8512-4042-a992-4bc0dc2e9b2a",
+                            Email = "nieves@gmail.com",
+                            EmailConfirmed = false,
+                            FullName = "nieves",
+                            LockoutEnabled = false,
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 7, 24, 45, 3, DateTimeKind.Unspecified).AddTicks(2618), new TimeSpan(0, 0, 0, 0, 0)),
+                            NationalIdentificationNumber = "1017123111",
+                            NormalizedEmail = "NIEVES@GMAIL.COM",
+                            NormalizedUserName = "NIEVES@GMAIL.COM",
+                            PasswordHash = "AQAAAAIAAYagAAAAEL3tNKmRjssSUdXyGHfpyXkwvdR2fsYEXwy3ss7Roq1KRd038DsNUbaLLN+WucsTyQ==",
+                            PhoneNumber = "11111111",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "f5f02167-ce7f-40e0-85a5-14ea4be71784",
+                            TwoFactorEnabled = false,
+                            UserName = "nieves@gmail.com"
+                        });
                 });
 
             modelBuilder.Entity("BackESPD.Domain.Entities.WaterControlForm", b =>
@@ -436,6 +518,20 @@ namespace BackESPD.Persistense.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "739f71a6-2661-4045-ab2c-0805686ed19c",
+                            Name = "Administrator",
+                            NormalizedName = "ADMINISTRATOR"
+                        },
+                        new
+                        {
+                            Id = "d9d1fd96-421f-45dc-b24d-e5f657fcb37d",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -523,6 +619,28 @@ namespace BackESPD.Persistense.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "a26df1b9-d21d-49c4-82c2-19273db7e63d",
+                            RoleId = "739f71a6-2661-4045-ab2c-0805686ed19c"
+                        },
+                        new
+                        {
+                            UserId = "671949f9-d6de-40ed-8dff-e2375898da77",
+                            RoleId = "d9d1fd96-421f-45dc-b24d-e5f657fcb37d"
+                        },
+                        new
+                        {
+                            UserId = "89def332-2344-49aa-ba69-3191c58df683",
+                            RoleId = "739f71a6-2661-4045-ab2c-0805686ed19c"
+                        },
+                        new
+                        {
+                            UserId = "27864f56-63c2-461b-9fc9-432b146e0c2c",
+                            RoleId = "739f71a6-2661-4045-ab2c-0805686ed19c"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
