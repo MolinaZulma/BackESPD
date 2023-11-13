@@ -19,15 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistense", "Persistense", "{B2404F33-3212-4C11-815E-9E4C6EEAC578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackESPD.Application", "BackESPD.Application\BackESPD.Application.csproj", "{E2B47981-ED31-4AD8-9C18-53C597B893C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackESPD.Application", "BackESPD.Application\BackESPD.Application.csproj", "{E2B47981-ED31-4AD8-9C18-53C597B893C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackESPD.Domain", "BackESPD.Domain\BackESPD.Domain.csproj", "{9B139559-F651-4849-9E70-BC49B9A32300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackESPD.Domain", "BackESPD.Domain\BackESPD.Domain.csproj", "{9B139559-F651-4849-9E70-BC49B9A32300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackESPD.Persistense", "BackESPD.Persistense\BackESPD.Persistense.csproj", "{A07ED19B-69A1-46C1-9E43-54DF7B82E054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackESPD.Persistense", "BackESPD.Persistense\BackESPD.Persistense.csproj", "{A07ED19B-69A1-46C1-9E43-54DF7B82E054}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackESPD.Shared", "BackESPD.Shared\BackESPD.Shared.csproj", "{DB76DA1C-3450-45A0-A39F-E51A011AD3B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackESPD.Shared", "BackESPD.Shared\BackESPD.Shared.csproj", "{DB76DA1C-3450-45A0-A39F-E51A011AD3B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackESPDWebAPI", "BackESPDWebAPI\BackESPDWebAPI.csproj", "{3A5C9E92-DBD7-490A-9684-78D5155AF93A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackESPDWebAPI", "BackESPDWebAPI\BackESPDWebAPI.csproj", "{3A5C9E92-DBD7-490A-9684-78D5155AF93A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
