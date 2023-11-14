@@ -1,6 +1,6 @@
 ﻿using BackESPD.Application.DTOs.Users.Account;
+using BackESPD.Application.Features.Authenticate.AuthenticateCommand;
 using BackESPD.Application.Features.Authenticate.RegisterCommand;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackESPDWebAPI.Controllers.v1
@@ -10,7 +10,16 @@ namespace BackESPDWebAPI.Controllers.v1
     {
 
 
-
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> AuthenticateAsync(AuthenticationRequestDto request)
+        {
+            return Ok(await Mediator.Send(new AuthenticateCommand
+            {
+                Email = request.Email,
+                Password = request.Password,
+                IpAddress = GenerateIPAddress()
+            }));
+        }
 
 
         [HttpPost("register")]

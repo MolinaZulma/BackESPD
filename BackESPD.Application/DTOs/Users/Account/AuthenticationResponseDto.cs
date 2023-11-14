@@ -11,6 +11,7 @@ namespace BackESPD.Application.DTOs.Users.Account
     {
         //Campos defina 
         public string Id { get; set; }
+        public string NationalIdentificationNumber { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public List<string> Roles { get; set; }

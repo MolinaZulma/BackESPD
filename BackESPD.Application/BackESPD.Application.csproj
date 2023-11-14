@@ -19,8 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Authenticate\RegisterCommand - Copia %282%29\" />
-    <Folder Include="Features\Authenticate\RegisterCommand - Copia\" />
     <Folder Include="Features\folder - Copia %282%29\Commands\CreateDamageReport\" />
     <Folder Include="Features\folder - Copia %282%29\Commands\DeleteteDamageReport\" />
     <Folder Include="Features\folder - Copia %282%29\Commands\UpdateDamageReport\" />

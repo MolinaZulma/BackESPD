@@ -53,6 +53,7 @@ namespace BackESPD.Persistense.Services
             authenticationResponse.JWToken = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
             authenticationResponse.Email = usuario.Email;
             authenticationResponse.UserName = usuario.UserName;
+            authenticationResponse.NationalIdentificationNumber = usuario.NationalIdentificationNumber;
 
             var rolesList = await _userManager.GetRolesAsync(usuario).ConfigureAwait(false);
             authenticationResponse.Roles = rolesList.ToList();
@@ -83,7 +84,8 @@ namespace BackESPD.Persistense.Services
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Email, usuario.Email),
                 new Claim("uid", usuario.Id),
-                new Claim("ip", ipAddres)
+                new Claim("ip", ipAddres),
+                new Claim("NationalIdentificationNumber", usuario.NationalIdentificationNumber)
             }
             .Union(userClaims)
             .Union(roleClaims);
