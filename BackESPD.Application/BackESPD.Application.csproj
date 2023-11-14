@@ -19,26 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\folder - Copia %282%29\Commands\CreateDamageReport\" />
-    <Folder Include="Features\folder - Copia %282%29\Commands\DeleteteDamageReport\" />
-    <Folder Include="Features\folder - Copia %282%29\Commands\UpdateDamageReport\" />
-    <Folder Include="Features\folder - Copia %282%29\Querys\GetAllDamageReport\" />
-    <Folder Include="Features\folder - Copia %282%29\Querys\GetByIdDamageReport\" />
-    <Folder Include="Features\folder - Copia\Commands\CreateDamageReport\" />
-    <Folder Include="Features\folder - Copia\Commands\DeleteteDamageReport\" />
-    <Folder Include="Features\folder - Copia\Commands\UpdateDamageReport\" />
-    <Folder Include="Features\folder - Copia\folder\Commands\CreateDamageReport\" />
-    <Folder Include="Features\folder - Copia\folder\Commands\DeleteteDamageReport\" />
-    <Folder Include="Features\folder - Copia\folder\Commands\UpdateDamageReport\" />
-    <Folder Include="Features\folder - Copia\folder\Querys\GetAllDamageReport\" />
-    <Folder Include="Features\folder - Copia\folder\Querys\GetByIdDamageReport\" />
-    <Folder Include="Features\folder - Copia\Querys\GetAllDamageReport\" />
-    <Folder Include="Features\folder - Copia\Querys\GetByIdDamageReport\" />
-    <Folder Include="Features\folder\Commands\CreateDamageReport\" />
-    <Folder Include="Features\folder\Commands\DeleteteDamageReport\" />
-    <Folder Include="Features\folder\Commands\UpdateDamageReport\" />
-    <Folder Include="Features\folder\Querys\GetAllDamageReport\" />
-    <Folder Include="Features\folder\Querys\GetByIdDamageReport\" />
+    <Folder Include="Features\Users\Commands\" />
+    <Folder Include="Features\Users\Querys\GetByIdUser\" />
   </ItemGroup>
 
 </Project>

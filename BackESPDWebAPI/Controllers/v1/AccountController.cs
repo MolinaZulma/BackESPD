@@ -1,6 +1,7 @@
 ﻿using BackESPD.Application.DTOs.Users.Account;
 using BackESPD.Application.Features.Authenticate.AuthenticateCommand;
 using BackESPD.Application.Features.Authenticate.RegisterCommand;
+using BackESPD.Application.Features.Users.Querys.GetAllUser;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackESPDWebAPI.Controllers.v1
@@ -10,16 +11,6 @@ namespace BackESPDWebAPI.Controllers.v1
     {
 
 
-        [HttpPost("authenticate")]
-        public async Task<IActionResult> AuthenticateAsync(AuthenticationRequestDto request)
-        {
-            return Ok(await Mediator.Send(new AuthenticateCommand
-            {
-                Email = request.Email,
-                Password = request.Password,
-                IpAddress = GenerateIPAddress()
-            }));
-        }
 
 
         [HttpPost("register")]
@@ -39,6 +30,16 @@ namespace BackESPDWebAPI.Controllers.v1
             }));
         }
 
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> AuthenticateAsync(AuthenticationRequestDto request)
+        {
+            return Ok(await Mediator.Send(new AuthenticateCommand
+            {
+                Email = request.Email,
+                Password = request.Password,
+                IpAddress = GenerateIPAddress()
+            }));
+        }
         private string GenerateIPAddress()
         {
             if (Request.Headers.ContainsKey("X-Forwarded-For"))
@@ -49,6 +50,14 @@ namespace BackESPDWebAPI.Controllers.v1
             {
                 return HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
             }
+        }
+
+        //Esta aqui temporalmente   
+        [HttpGet]
+        [Route("users/getAll")]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await Mediator.Send(new GetAllUserQuery()));
         }
 
     }
