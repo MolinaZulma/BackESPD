@@ -138,6 +138,10 @@ namespace BackESPD.Persistense.Services
                     var result = await _userManager.CreateAsync(usuario, request.Password);
                     if (result.Succeeded)
                     {
+                        //Desbloqueo de cuenta de los usuarios LockoutEnabled = true analizar por que los pone false si apenas se esta creando
+                        usuario.LockoutEnabled = false;
+                        await _userManager.UpdateAsync(usuario);
+
                         //if (await _roleManager.RoleExistsAsync(request.NameRole))
                         //{
                         await _userManager.AddToRoleAsync(usuario, request.NameRole.ToString());
