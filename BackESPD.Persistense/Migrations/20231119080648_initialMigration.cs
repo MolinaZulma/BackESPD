@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BackESPD.Persistense.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class initialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -282,7 +282,7 @@ namespace BackESPD.Persistense.Migrations
                     JarConcentration = table.Column<int>(type: "int", nullable: false),
                     JarOptime = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     PhJar = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdPlant = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -291,10 +291,10 @@ namespace BackESPD.Persistense.Migrations
                 {
                     table.PrimaryKey("PK_JarFormatForm", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_JarFormatForm_AspNetUsers_IdUser",
-                        column: x => x.IdUser,
+                        name: "FK_JarFormatForm_AspNetUsers_NationalIdentificationNumber",
+                        column: x => x.NationalIdentificationNumber,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
+                        principalColumn: "NationalIdentificationNumber",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_JarFormatForm_Plant_IdPlant",
@@ -316,7 +316,7 @@ namespace BackESPD.Persistense.Migrations
                     Ph = table.Column<double>(type: "float", nullable: false),
                     CreamWeightKilos = table.Column<double>(type: "float", nullable: false),
                     SiftingWeightKilos = table.Column<double>(type: "float", nullable: false),
-                    IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    IdUNationalIdentificationNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdPlant = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -325,10 +325,10 @@ namespace BackESPD.Persistense.Migrations
                 {
                     table.PrimaryKey("PK_SampleForm", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SampleForm_AspNetUsers_IdUser",
-                        column: x => x.IdUser,
+                        name: "FK_SampleForm_AspNetUsers_IdUNationalIdentificationNumber",
+                        column: x => x.IdUNationalIdentificationNumber,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
+                        principalColumn: "NationalIdentificationNumber",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SampleForm_Plant_IdPlant",
@@ -351,7 +351,7 @@ namespace BackESPD.Persistense.Migrations
                     SodiumHypochlorite = table.Column<double>(type: "float", nullable: false),
                     ChlorineGas = table.Column<double>(type: "float", nullable: false),
                     ParticlesPerMillion = table.Column<double>(type: "float", nullable: false),
-                    IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdPlant = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -360,10 +360,10 @@ namespace BackESPD.Persistense.Migrations
                 {
                     table.PrimaryKey("PK_WaterControlForm", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_WaterControlForm_AspNetUsers_IdUser",
-                        column: x => x.IdUser,
+                        name: "FK_WaterControlForm_AspNetUsers_NationalIdentificationNumber",
+                        column: x => x.NationalIdentificationNumber,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
+                        principalColumn: "NationalIdentificationNumber",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_WaterControlForm_Plant_IdPlant",
@@ -378,8 +378,8 @@ namespace BackESPD.Persistense.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "7666b720-0d88-48d6-827c-e7b90613817e", null, "User", "USER" },
-                    { "d082f831-f121-4322-b8cf-166f024829b5", null, "Administrator", "ADMINISTRATOR" }
+                    { "3bd6469b-a15d-46ed-8b74-632fb9054469", null, "Administrator", "ADMINISTRATOR" },
+                    { "adcb4d02-a7ca-4008-bfeb-76ae1dbd7cc6", null, "User", "USER" }
                 });
 
             migrationBuilder.InsertData(
@@ -387,10 +387,10 @@ namespace BackESPD.Persistense.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NationalIdentificationNumber", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "0a504a4e-049b-4225-bd60-1ed443f11d1c", 0, "ecd9e86a-d101-4df6-827c-de50c7046ab7", "esteban@gmail.com", false, "esteban", false, new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8377), new TimeSpan(0, 0, 0, 0, 0)), "1017123503", "ESTEBAN@GMAIL.COM", "ESTEBAN@GMAIL.COM", "AQAAAAIAAYagAAAAEAePTDXBF+WjBI9RVCpWX7lbbMjdHyLVhwA0TRq+iI03oxOPmjLH8QJ2a12mQMT7Eg==", "11111111", false, "f9272071-8835-4f3f-90fc-f93156ca71b2", false, "esteban@gmail.com" },
-                    { "0ec4f3b8-6e22-4b43-99c3-5425a486fc1a", 0, "53d083a1-8947-47a8-9cd9-5cc22a1de59a", "sara@gmail.com", false, "sara", false, new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8385), new TimeSpan(0, 0, 0, 0, 0)), "1017123700", "SARA@GMAIL.COM", "SARA@GMAIL.COM", "AQAAAAIAAYagAAAAEENOT22VI8LoUwOKoqgTJt3CzyWDfQwMsmODOTnq3aZDIVJND9Q5YQoI8uaV8RPPvQ==", "11111111", false, "f5ab7acb-6f76-4fc4-b0f1-3d31eab8e2cc", false, "sara@gmail.com" },
-                    { "6cf5c757-e938-4e7e-8341-5284daced81a", 0, "cfb39034-5d50-46c3-898d-ea54c2aa029a", "nieves@gmail.com", false, "nieves", false, new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8393), new TimeSpan(0, 0, 0, 0, 0)), "1017123111", "NIEVES@GMAIL.COM", "NIEVES@GMAIL.COM", "AQAAAAIAAYagAAAAECJLWno1TMAmUPKznreqfqW51J0JSwSjgw+6+0HPwFAnCbfrFZ/IzTUQtDA7q1KxVA==", "11111111", false, "e67c3e58-e927-4fb2-baf3-484656f891e4", false, "nieves@gmail.com" },
-                    { "93f6c7d9-995e-4df9-91eb-cb68a3c574ad", 0, "53a26702-7439-42bf-99b9-a3217d488f85", "mar@gmail.com", false, "mar", false, new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8326), new TimeSpan(0, 0, 0, 0, 0)), "1017182914", "MAR@GMAIL.COM", "MAR@GMAIL.COM", "AQAAAAIAAYagAAAAEDIJiwXGVTqCzC4RUlL2eKuee8J2wZhtTluN6C2PWzeUC1ovyTlRdh/PVLQK0+xIkQ==", "11111111", false, "ba1ba46f-0890-4d23-a99c-162510d29bb0", false, "mar@gmail.com" }
+                    { "226e37d7-7a04-47d4-9c96-315532559a52", 0, "7f93035b-c4ac-4d8d-a7ca-8ae99d7ac5f7", "mar@gmail.com", false, "mar", false, new DateTimeOffset(new DateTime(2123, 11, 19, 8, 6, 48, 364, DateTimeKind.Unspecified).AddTicks(7339), new TimeSpan(0, 0, 0, 0, 0)), "1017182914", "MAR@GMAIL.COM", "MAR@GMAIL.COM", "AQAAAAIAAYagAAAAECAlyd+8NIrwMtVqC2NKN9MhfKzO9MhgKM2grt2jY7KlCxn0QlLE3FyOfwA7CSXCCQ==", "11111111", false, "7590a304-9868-4c68-a455-39b797dfb245", false, "mar@gmail.com" },
+                    { "587b2f71-9f00-4afc-8d44-35c63f106684", 0, "32733da8-d531-4513-8c47-9e418b1c4cc3", "esteban@gmail.com", false, "esteban", false, new DateTimeOffset(new DateTime(2123, 11, 19, 8, 6, 48, 364, DateTimeKind.Unspecified).AddTicks(7366), new TimeSpan(0, 0, 0, 0, 0)), "1017123503", "ESTEBAN@GMAIL.COM", "ESTEBAN@GMAIL.COM", "AQAAAAIAAYagAAAAEMw4VXfYRoCGWPYy3bS4JxYhpB4jlLYSFO/wh8KJ2dAORSww2RONbkn3UdWTJ8d/JA==", "11111111", false, "b6aa9191-39af-4308-8fc1-9f82c9c80a78", false, "esteban@gmail.com" },
+                    { "6e08593e-99bf-4e20-bc84-5e411c1fd270", 0, "a99c63d5-998b-4110-844a-1f697d25ba40", "sara@gmail.com", false, "sara", false, new DateTimeOffset(new DateTime(2123, 11, 19, 8, 6, 48, 364, DateTimeKind.Unspecified).AddTicks(7375), new TimeSpan(0, 0, 0, 0, 0)), "1017123700", "SARA@GMAIL.COM", "SARA@GMAIL.COM", "AQAAAAIAAYagAAAAEMVBMi4rIZxyNFjep5Nz2u9E6DGm+XSb5A9KUV6e3fL3OZc4PwBqt0JPlDUhPH9hmw==", "11111111", false, "a31ea129-9184-499f-95a0-6cc25d07b47d", false, "sara@gmail.com" },
+                    { "bc0887f6-fae8-4d64-9a3e-d5238daa1806", 0, "717ce815-d348-4458-be25-a07d9dd850e2", "nieves@gmail.com", false, "nieves", false, new DateTimeOffset(new DateTime(2123, 11, 19, 8, 6, 48, 364, DateTimeKind.Unspecified).AddTicks(7382), new TimeSpan(0, 0, 0, 0, 0)), "1017123111", "NIEVES@GMAIL.COM", "NIEVES@GMAIL.COM", "AQAAAAIAAYagAAAAEDHg/nownEMiXPokY/Ro1U9RPpfffNFMiyZyyLzFBzrtiS8136zLaVYhb338IImfow==", "11111111", false, "0de3b75b-61f5-48c6-831e-1d3fc75b9a52", false, "nieves@gmail.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -398,10 +398,10 @@ namespace BackESPD.Persistense.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "7666b720-0d88-48d6-827c-e7b90613817e", "0a504a4e-049b-4225-bd60-1ed443f11d1c" },
-                    { "d082f831-f121-4322-b8cf-166f024829b5", "0ec4f3b8-6e22-4b43-99c3-5425a486fc1a" },
-                    { "d082f831-f121-4322-b8cf-166f024829b5", "6cf5c757-e938-4e7e-8341-5284daced81a" },
-                    { "d082f831-f121-4322-b8cf-166f024829b5", "93f6c7d9-995e-4df9-91eb-cb68a3c574ad" }
+                    { "3bd6469b-a15d-46ed-8b74-632fb9054469", "226e37d7-7a04-47d4-9c96-315532559a52" },
+                    { "adcb4d02-a7ca-4008-bfeb-76ae1dbd7cc6", "587b2f71-9f00-4afc-8d44-35c63f106684" },
+                    { "3bd6469b-a15d-46ed-8b74-632fb9054469", "6e08593e-99bf-4e20-bc84-5e411c1fd270" },
+                    { "3bd6469b-a15d-46ed-8b74-632fb9054469", "bc0887f6-fae8-4d64-9a3e-d5238daa1806" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -477,9 +477,9 @@ namespace BackESPD.Persistense.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_JarFormatForm_IdUser",
+                name: "IX_JarFormatForm_NationalIdentificationNumber",
                 table: "JarFormatForm",
-                column: "IdUser");
+                column: "NationalIdentificationNumber");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SampleForm_IdPlant",
@@ -488,9 +488,9 @@ namespace BackESPD.Persistense.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_SampleForm_IdUser",
+                name: "IX_SampleForm_IdUNationalIdentificationNumber",
                 table: "SampleForm",
-                column: "IdUser");
+                column: "IdUNationalIdentificationNumber");
 
             migrationBuilder.CreateIndex(
                 name: "IX_WaterControlForm_IdPlant",
@@ -499,9 +499,9 @@ namespace BackESPD.Persistense.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_WaterControlForm_IdUser",
+                name: "IX_WaterControlForm_NationalIdentificationNumber",
                 table: "WaterControlForm",
-                column: "IdUser");
+                column: "NationalIdentificationNumber");
         }
 
         /// <inheritdoc />

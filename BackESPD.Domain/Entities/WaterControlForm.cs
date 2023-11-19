@@ -11,7 +11,7 @@ namespace BackESPD.Domain.Entities
         public double SodiumHypochlorite { get; set; }
         public double ChlorineGas { get; set; }
         public double ParticlesPerMillion { get; set; }
-        public string IdUser { get; set; }
+        public string NationalIdentificationNumber { get; set; }
         public User IdUserNavigation { get; set; }
         public int IdPlant { get; set; }
         public virtual Plant IdPlantNavigation { get; set; }

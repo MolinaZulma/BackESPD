@@ -25,6 +25,7 @@ namespace BackESPD.Persistense.DbContext
         public virtual DbSet<JarFormatForm> JarFormatForm { get; set; }
         public virtual DbSet<SampleForm> SampleForm { get; set; }
         public virtual DbSet<WaterControlForm> WaterControlForm { get; set; }
+        public virtual DbSet<Roles> Roles { get; set; }
 
 
 
