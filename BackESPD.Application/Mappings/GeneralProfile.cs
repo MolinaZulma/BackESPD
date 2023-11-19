@@ -62,7 +62,7 @@ namespace BackESPD.Application.Mappings
             CreateMap<CreateSampleFormCommand, SampleForm>();
             #endregion
 
-            #region SampleForm
+            #region WaterControlForm
             CreateMap<WaterControlForm, WaterControlFormDto>().ReverseMap();
             CreateMap<CreateWaterControlFormCommand, WaterControlForm>();
             #endregion
