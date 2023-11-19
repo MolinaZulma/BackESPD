@@ -15,8 +15,8 @@ namespace BackESPD.Persistense.Configuration
             builder.Property(P => P.PhJar).IsRequired();
 
             builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.JarFormatForm)
-                .HasForeignKey(p => p.IdUser)
-                .HasPrincipalKey(p => p.Id);
+                .HasForeignKey(p => p.NationalIdentificationNumber)
+                .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
             builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.JarFormatForm)
                 .HasForeignKey<JarFormatForm>(p => p.IdPlant)

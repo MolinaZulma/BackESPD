@@ -7,7 +7,7 @@ namespace BackESPD.Domain.Entities
         public int JarConcentration {  get; set; }
         public string JarOptime {  get; set; }
         public int PhJar {  get; set; }
-        public string IdUser {  get; set; }
+        public string NationalIdentificationNumber {  get; set; }
         public User IdUserNavigation { get; set; }
         public int IdPlant { get; set; }
         public virtual Plant IdPlantNavigation { get; set; }
