@@ -8,10 +8,11 @@ namespace BackESPD.Domain.Entities
         public string TypePlant {  get; set; }
         public string Direction { get; set; }
         public string Description { get; set; }
-        public FormatPTAPForm FormatPTAPForm { get; set; }
-        public ActivityLogsForm ActivityLogsForm { get; set; }
-        public JarFormatForm JarFormatForm { get; set; }
-        public SampleForm SampleForm { get; set; }
-        public WaterControlForm WaterControlForm { get; set; }
+        public virtual ICollection<FormatPTAPForm> FormatPTAPForm { get; } = new List<FormatPTAPForm>();
+        public virtual ICollection<ActivityLogsForm> ActivityLogsForm { get; } = new List<ActivityLogsForm>();
+        public virtual ICollection<JarFormatForm> JarFormatForm { get; } = new List<JarFormatForm>();
+        public virtual ICollection<SampleForm> SampleForm { get; } = new List<SampleForm>();
+        public virtual ICollection<WaterControlForm> WaterControlForm { get; } = new List<WaterControlForm>();
+            
     }
 }

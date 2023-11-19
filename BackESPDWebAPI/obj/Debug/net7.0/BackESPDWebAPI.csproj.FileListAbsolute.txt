@@ -89,7 +89,6 @@ C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAP
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.AssemblyInfoInputs.cache
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.AssemblyInfo.cs
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.csproj.CoreCompileInputs.cache
-C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\staticwebassets\msbuild.BackESPDWebAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.BackESPDWebAPI.props

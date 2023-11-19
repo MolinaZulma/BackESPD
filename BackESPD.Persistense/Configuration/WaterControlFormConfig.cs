@@ -22,9 +22,9 @@ namespace BackESPD.Persistense.Configuration
                .HasForeignKey(p => p.NationalIdentificationNumber)
                .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
-            builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.WaterControlForm)
-                .HasForeignKey<WaterControlForm>(p => p.IdPlant)
-                .HasPrincipalKey<Plant>(p => p.Id);
+            builder.HasOne(p => p.IdPlantNavigation).WithMany(p => p.WaterControlForm)
+             .HasForeignKey(p => p.IdPlant)
+             .HasPrincipalKey(p => p.Id);
         }
     }
 }

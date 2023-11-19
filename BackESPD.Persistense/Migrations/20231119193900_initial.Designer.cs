@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackESPD.Persistense.Migrations
 {
     [DbContext(typeof(BackESPDDbContext))]
-    [Migration("20231119084004_add-roles-entity")]
-    partial class addrolesentity
+    [Migration("20231119193900_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,8 +58,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdPlant")
-                        .IsUnique();
+                    b.HasIndex("IdPlant");
 
                     b.HasIndex("NationalIdentificationNumber");
 
@@ -169,8 +168,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdPlant")
-                        .IsUnique();
+                    b.HasIndex("IdPlant");
 
                     b.HasIndex("NationalIdentificationNumber");
 
@@ -211,8 +209,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdPlant")
-                        .IsUnique();
+                    b.HasIndex("IdPlant");
 
                     b.HasIndex("NationalIdentificationNumber");
 
@@ -299,8 +296,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdPlant")
-                        .IsUnique();
+                    b.HasIndex("IdPlant");
 
                     b.HasIndex("IdUNationalIdentificationNumber");
 
@@ -383,81 +379,81 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9e4ed4fe-f954-4262-a7c3-df7f4d7e5950",
+                            Id = "326216e0-879c-44b3-81b8-00971d18e07f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "718c63c4-56a6-4474-a59b-9518bb97ac51",
+                            ConcurrencyStamp = "f507abd1-abc1-4214-a685-6909e8e15a7b",
                             Email = "mar@gmail.com",
                             EmailConfirmed = false,
                             FullName = "mar",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 8, 40, 3, 990, DateTimeKind.Unspecified).AddTicks(7284), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 19, 39, 0, 22, DateTimeKind.Unspecified).AddTicks(1719), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017182914",
                             NormalizedEmail = "MAR@GMAIL.COM",
                             NormalizedUserName = "MAR@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBgmWgNvQAzsiLwpl4KD1KZveyNLFw1Ub6ZtbJFgbH7pt2rBO4BFeKkBlY/mmdu2Kg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEM0DAjZeNKVMgVgvXwtBCM7Wc1jUVn4H1dEZBWAK5axWkDw1Pcken0m2psZ0TereVQ==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "04ba140d-1d34-4223-8873-260e4f890d80",
+                            SecurityStamp = "31c059e8-1496-4185-a7e4-f6753f40a8e0",
                             TwoFactorEnabled = false,
                             UserName = "mar@gmail.com"
                         },
                         new
                         {
-                            Id = "2f8d37bd-0cf1-4c47-9a31-b4d820f185f6",
+                            Id = "653b1b73-4119-422a-9b55-1d94c654cf0b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d827caeb-466c-4f8e-8ef1-a9c3ea3259fd",
+                            ConcurrencyStamp = "fc7c3ad3-750d-43a8-8cf2-8133e6d26911",
                             Email = "esteban@gmail.com",
                             EmailConfirmed = false,
                             FullName = "esteban",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 8, 40, 3, 990, DateTimeKind.Unspecified).AddTicks(7310), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 19, 39, 0, 22, DateTimeKind.Unspecified).AddTicks(1756), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123503",
                             NormalizedEmail = "ESTEBAN@GMAIL.COM",
                             NormalizedUserName = "ESTEBAN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEECLlYOg/VYNUrXFa1gXWJVhEL+3rbiunvUlpkYyRabp2x4uDhlQbQz4DHQMmOB/gg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEP2m/5Rl1Yw/JLJebz1dyV4aCZYaWIgOpaatDE2cOmrLXMV61mruPajAX4Q2Ha6K9Q==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3f902ed0-ba5a-40fd-b23d-0bca489b9f2b",
+                            SecurityStamp = "c53c7c2f-9bfd-4266-8609-d26efd13a097",
                             TwoFactorEnabled = false,
                             UserName = "esteban@gmail.com"
                         },
                         new
                         {
-                            Id = "7721ba37-bbf5-4c99-b1d1-3fc99af6f177",
+                            Id = "e1146145-31be-4238-b476-b6be8e6ff1dd",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a18bc499-ffb2-4000-b4ff-432f00fa8220",
+                            ConcurrencyStamp = "6817bb71-37e9-44c1-992d-0075f0729ab5",
                             Email = "sara@gmail.com",
                             EmailConfirmed = false,
                             FullName = "sara",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 8, 40, 3, 990, DateTimeKind.Unspecified).AddTicks(7320), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 19, 39, 0, 22, DateTimeKind.Unspecified).AddTicks(1767), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123700",
                             NormalizedEmail = "SARA@GMAIL.COM",
                             NormalizedUserName = "SARA@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFGAJiUNjtH8qcHpnusLmXrPkXXMEV69XVijxs/TfkmzoRI9ApcZEe2QV1g7Mg2LJQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFXuw4pXu6Qphqq0mtF8o9+fOAcUoy1Mgji9dZb3whQE4x2Ikrl5h+N0+qbmKvhaVg==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "02235ea8-2530-461a-b940-730d3bff912c",
+                            SecurityStamp = "ed684391-491c-4375-9ce9-14a4eb74a1ce",
                             TwoFactorEnabled = false,
                             UserName = "sara@gmail.com"
                         },
                         new
                         {
-                            Id = "ecd0e666-1663-4976-a5d9-a9ef3e0db21b",
+                            Id = "5f1ba543-3acb-4303-ae07-b0fcf1416d56",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c85238c4-4a36-4940-a21a-416283a43b84",
+                            ConcurrencyStamp = "e1589390-5a38-47e2-9c4b-656f66e8e00f",
                             Email = "nieves@gmail.com",
                             EmailConfirmed = false,
                             FullName = "nieves",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 8, 40, 3, 990, DateTimeKind.Unspecified).AddTicks(7327), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 19, 39, 0, 22, DateTimeKind.Unspecified).AddTicks(1775), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123111",
                             NormalizedEmail = "NIEVES@GMAIL.COM",
                             NormalizedUserName = "NIEVES@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBQ50rvPOw1GnqsTf6WsONWXCxZfXLCCj+weNqz/U1/g04RH5CIo4wUnZuLP6wHzuA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEM6sp3r61rBavfjAMa5auVXJoaUW33PvCqG4HDPoqc0DGstYRK0AnHvK2YZ2UCg9qA==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ceecdd56-b88e-4d82-92ff-c57214b9a52f",
+                            SecurityStamp = "430955ba-4773-413c-8574-5ec74ff6f0f2",
                             TwoFactorEnabled = false,
                             UserName = "nieves@gmail.com"
                         });
@@ -507,8 +503,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdPlant")
-                        .IsUnique();
+                    b.HasIndex("IdPlant");
 
                     b.HasIndex("NationalIdentificationNumber");
 
@@ -522,6 +517,10 @@ namespace BackESPD.Persistense.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -541,16 +540,20 @@ namespace BackESPD.Persistense.Migrations
 
                     b.ToTable("AspNetRoles", (string)null);
 
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityRole");
+
+                    b.UseTphMappingStrategy();
+
                     b.HasData(
                         new
                         {
-                            Id = "9b0c28ca-cea3-4bce-9a0e-96b2a17af309",
+                            Id = "027f2e21-37aa-4af6-8e1c-8081efaabb95",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "3c347337-f25c-41b9-9777-b56d7b937f79",
+                            Id = "eec32d28-0c7e-45c2-91f5-802577ba6611",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -645,23 +648,23 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "9e4ed4fe-f954-4262-a7c3-df7f4d7e5950",
-                            RoleId = "9b0c28ca-cea3-4bce-9a0e-96b2a17af309"
+                            UserId = "326216e0-879c-44b3-81b8-00971d18e07f",
+                            RoleId = "027f2e21-37aa-4af6-8e1c-8081efaabb95"
                         },
                         new
                         {
-                            UserId = "2f8d37bd-0cf1-4c47-9a31-b4d820f185f6",
-                            RoleId = "3c347337-f25c-41b9-9777-b56d7b937f79"
+                            UserId = "653b1b73-4119-422a-9b55-1d94c654cf0b",
+                            RoleId = "eec32d28-0c7e-45c2-91f5-802577ba6611"
                         },
                         new
                         {
-                            UserId = "7721ba37-bbf5-4c99-b1d1-3fc99af6f177",
-                            RoleId = "9b0c28ca-cea3-4bce-9a0e-96b2a17af309"
+                            UserId = "e1146145-31be-4238-b476-b6be8e6ff1dd",
+                            RoleId = "027f2e21-37aa-4af6-8e1c-8081efaabb95"
                         },
                         new
                         {
-                            UserId = "ecd0e666-1663-4976-a5d9-a9ef3e0db21b",
-                            RoleId = "9b0c28ca-cea3-4bce-9a0e-96b2a17af309"
+                            UserId = "5f1ba543-3acb-4303-ae07-b0fcf1416d56",
+                            RoleId = "027f2e21-37aa-4af6-8e1c-8081efaabb95"
                         });
                 });
 
@@ -684,11 +687,18 @@ namespace BackESPD.Persistense.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BackESPD.Domain.Entities.Roles", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
+
+                    b.HasDiscriminator().HasValue("Roles");
+                });
+
             modelBuilder.Entity("BackESPD.Domain.Entities.ActivityLogsForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
-                        .WithOne("ActivityLogsForm")
-                        .HasForeignKey("BackESPD.Domain.Entities.ActivityLogsForm", "IdPlant")
+                        .WithMany("ActivityLogsForm")
+                        .HasForeignKey("IdPlant")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -719,8 +729,8 @@ namespace BackESPD.Persistense.Migrations
             modelBuilder.Entity("BackESPD.Domain.Entities.FormatPTAPForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
-                        .WithOne("FormatPTAPForm")
-                        .HasForeignKey("BackESPD.Domain.Entities.FormatPTAPForm", "IdPlant")
+                        .WithMany("FormatPTAPForm")
+                        .HasForeignKey("IdPlant")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -739,8 +749,8 @@ namespace BackESPD.Persistense.Migrations
             modelBuilder.Entity("BackESPD.Domain.Entities.JarFormatForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
-                        .WithOne("JarFormatForm")
-                        .HasForeignKey("BackESPD.Domain.Entities.JarFormatForm", "IdPlant")
+                        .WithMany("JarFormatForm")
+                        .HasForeignKey("IdPlant")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -759,8 +769,8 @@ namespace BackESPD.Persistense.Migrations
             modelBuilder.Entity("BackESPD.Domain.Entities.SampleForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
-                        .WithOne("SampleForm")
-                        .HasForeignKey("BackESPD.Domain.Entities.SampleForm", "IdPlant")
+                        .WithMany("SampleForm")
+                        .HasForeignKey("IdPlant")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -779,8 +789,8 @@ namespace BackESPD.Persistense.Migrations
             modelBuilder.Entity("BackESPD.Domain.Entities.WaterControlForm", b =>
                 {
                     b.HasOne("BackESPD.Domain.Entities.Plant", "IdPlantNavigation")
-                        .WithOne("WaterControlForm")
-                        .HasForeignKey("BackESPD.Domain.Entities.WaterControlForm", "IdPlant")
+                        .WithMany("WaterControlForm")
+                        .HasForeignKey("IdPlant")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -849,20 +859,15 @@ namespace BackESPD.Persistense.Migrations
 
             modelBuilder.Entity("BackESPD.Domain.Entities.Plant", b =>
                 {
-                    b.Navigation("ActivityLogsForm")
-                        .IsRequired();
+                    b.Navigation("ActivityLogsForm");
 
-                    b.Navigation("FormatPTAPForm")
-                        .IsRequired();
+                    b.Navigation("FormatPTAPForm");
 
-                    b.Navigation("JarFormatForm")
-                        .IsRequired();
+                    b.Navigation("JarFormatForm");
 
-                    b.Navigation("SampleForm")
-                        .IsRequired();
+                    b.Navigation("SampleForm");
 
-                    b.Navigation("WaterControlForm")
-                        .IsRequired();
+                    b.Navigation("WaterControlForm");
                 });
 
             modelBuilder.Entity("BackESPD.Domain.Entities.User", b =>
