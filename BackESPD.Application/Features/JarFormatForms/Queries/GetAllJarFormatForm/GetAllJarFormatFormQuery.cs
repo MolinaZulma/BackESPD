@@ -26,7 +26,7 @@ namespace BackESPD.Application.Features.JarFormatForms.Queries.GetAllJarFormatFo
         {
             try
             {
-                var jarFormatForm = await _repositoryAsync.GetAllAsync();
+                var jarFormatForm = await _repositoryAsync.GetAllAsync(includeProperties: $"{nameof(JarFormatForm.IdUserNavigation)},{nameof(JarFormatForm.IdPlantNavigation)}");
                 return new GenericResponse<List<JarFormatFormDto>>(_mapper.Map<List<JarFormatFormDto>>(jarFormatForm));
             }
             catch (Exception)

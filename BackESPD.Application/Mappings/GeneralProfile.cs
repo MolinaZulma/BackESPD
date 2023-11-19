@@ -55,6 +55,11 @@ namespace BackESPD.Application.Mappings
             #region JarFormatForm
             CreateMap<JarFormatForm, JarFormatFormDto>().ReverseMap();
             CreateMap<CreateJarFormatFormCommand, JarFormatForm>();
+
+            CreateMap<JarFormatForm, JarFormatFormDto>()
+            .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+            .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
             #endregion
 
             #region SampleForm

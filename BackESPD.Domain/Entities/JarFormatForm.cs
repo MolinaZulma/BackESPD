@@ -10,6 +10,6 @@ namespace BackESPD.Domain.Entities
         public string NationalIdentificationNumber {  get; set; }
         public User IdUserNavigation { get; set; }
         public int IdPlant { get; set; }
-        public virtual Plant IdPlantNavigation { get; set; }
+        public  Plant IdPlantNavigation { get; set; }
     }
 }
