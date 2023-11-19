@@ -26,7 +26,7 @@ namespace BackESPD.Application.Features.ActivityLogsForms.Queries.GetAllActivity
         {
             try
             {
-                var activityLogsForm = await _repositoryAsync.GetAllAsync();
+                var activityLogsForm = await _repositoryAsync.GetAllAsync(includeProperties: $"{nameof(ActivityLogsForm.IdUserNavigation)},{nameof(ActivityLogsForm.IdPlantNavigation)}");
                 return new GenericResponse<List<ActivityLogsFormDto>>(_mapper.Map<List<ActivityLogsFormDto>>(activityLogsForm));
             }
             catch (Exception)

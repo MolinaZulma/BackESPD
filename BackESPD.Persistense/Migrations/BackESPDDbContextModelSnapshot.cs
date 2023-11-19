@@ -147,12 +147,12 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<int>("IdPlant")
                         .HasColumnType("int");
 
-                    b.Property<string>("IdUser")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("NationalIdentificationNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<double>("ParticlesPerMillion")
                         .HasColumnType("float");
@@ -169,7 +169,7 @@ namespace BackESPD.Persistense.Migrations
                     b.HasIndex("IdPlant")
                         .IsUnique();
 
-                    b.HasIndex("IdUser");
+                    b.HasIndex("NationalIdentificationNumber");
 
                     b.ToTable("FormatPTAPForm", (string)null);
                 });
@@ -380,81 +380,81 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "cd1309ba-1ccc-43a0-ab49-c16c13802532",
+                            Id = "93f6c7d9-995e-4df9-91eb-cb68a3c574ad",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1e2ccdaf-f50e-4fa9-8596-33207590eb64",
+                            ConcurrencyStamp = "53a26702-7439-42bf-99b9-a3217d488f85",
                             Email = "mar@gmail.com",
                             EmailConfirmed = false,
                             FullName = "mar",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 41, 16, 319, DateTimeKind.Unspecified).AddTicks(9560), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8326), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017182914",
                             NormalizedEmail = "MAR@GMAIL.COM",
                             NormalizedUserName = "MAR@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMXDWmLncqDqz94HSAi7YXr3cA09v6+Pu5nbQ39Vg/6laipQQ59RXr5yOHP9lOLFiA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDIJiwXGVTqCzC4RUlL2eKuee8J2wZhtTluN6C2PWzeUC1ovyTlRdh/PVLQK0+xIkQ==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e7603ba0-f86c-455d-a37f-29d3d04f2ab0",
+                            SecurityStamp = "ba1ba46f-0890-4d23-a99c-162510d29bb0",
                             TwoFactorEnabled = false,
                             UserName = "mar@gmail.com"
                         },
                         new
                         {
-                            Id = "58e96ed3-d011-48ee-8515-29648530d978",
+                            Id = "0a504a4e-049b-4225-bd60-1ed443f11d1c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d9928be4-6bec-4e24-a4b9-7418dc3ec587",
+                            ConcurrencyStamp = "ecd9e86a-d101-4df6-827c-de50c7046ab7",
                             Email = "esteban@gmail.com",
                             EmailConfirmed = false,
                             FullName = "esteban",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 41, 16, 319, DateTimeKind.Unspecified).AddTicks(9603), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8377), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123503",
                             NormalizedEmail = "ESTEBAN@GMAIL.COM",
                             NormalizedUserName = "ESTEBAN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEP3RSp9QsydGsua4xdWh9WqEzSCO6kYTco4jvv+yIh0C/zEfusjnPkbmB+syVRezTw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAePTDXBF+WjBI9RVCpWX7lbbMjdHyLVhwA0TRq+iI03oxOPmjLH8QJ2a12mQMT7Eg==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6c4efabc-45c4-42ef-b9db-740c378ef444",
+                            SecurityStamp = "f9272071-8835-4f3f-90fc-f93156ca71b2",
                             TwoFactorEnabled = false,
                             UserName = "esteban@gmail.com"
                         },
                         new
                         {
-                            Id = "baa27d2d-072c-44fd-b5b7-57fed1e51ba8",
+                            Id = "0ec4f3b8-6e22-4b43-99c3-5425a486fc1a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e9b9b0c2-2854-412b-9f02-ed81234cc0ad",
+                            ConcurrencyStamp = "53d083a1-8947-47a8-9cd9-5cc22a1de59a",
                             Email = "sara@gmail.com",
                             EmailConfirmed = false,
                             FullName = "sara",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 41, 16, 319, DateTimeKind.Unspecified).AddTicks(9610), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8385), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123700",
                             NormalizedEmail = "SARA@GMAIL.COM",
                             NormalizedUserName = "SARA@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIQz7XmsHb/YbtchjVZOPCb2GfURlzYQcYEWppSQKL7Ii76WDY83j9LBaQk8u1dPfw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEENOT22VI8LoUwOKoqgTJt3CzyWDfQwMsmODOTnq3aZDIVJND9Q5YQoI8uaV8RPPvQ==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2a4e317f-6138-4478-9860-7982128bd42f",
+                            SecurityStamp = "f5ab7acb-6f76-4fc4-b0f1-3d31eab8e2cc",
                             TwoFactorEnabled = false,
                             UserName = "sara@gmail.com"
                         },
                         new
                         {
-                            Id = "c047b370-9034-4a1a-9c0f-855af92c7a85",
+                            Id = "6cf5c757-e938-4e7e-8341-5284daced81a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9c6e0226-a369-4ecd-b74e-0ed313c1086e",
+                            ConcurrencyStamp = "cfb39034-5d50-46c3-898d-ea54c2aa029a",
                             Email = "nieves@gmail.com",
                             EmailConfirmed = false,
                             FullName = "nieves",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 41, 16, 319, DateTimeKind.Unspecified).AddTicks(9617), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 7, 16, 59, 883, DateTimeKind.Unspecified).AddTicks(8393), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123111",
                             NormalizedEmail = "NIEVES@GMAIL.COM",
                             NormalizedUserName = "NIEVES@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEN95NfhK1zxKZHhtrZRX1bJa7ew2MjV6Rb/Yp4fxQHl4JNqW3JQt4ufEtt8O3uPrwg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECJLWno1TMAmUPKznreqfqW51J0JSwSjgw+6+0HPwFAnCbfrFZ/IzTUQtDA7q1KxVA==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c61945e4-df68-47bc-a435-8c2dde42ac55",
+                            SecurityStamp = "e67c3e58-e927-4fb2-baf3-484656f891e4",
                             TwoFactorEnabled = false,
                             UserName = "nieves@gmail.com"
                         });
@@ -541,13 +541,13 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "819c9655-f11d-4da8-94b3-20f7588ae38b",
+                            Id = "d082f831-f121-4322-b8cf-166f024829b5",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "ea97dd5a-634b-435c-94ca-184a69474aa0",
+                            Id = "7666b720-0d88-48d6-827c-e7b90613817e",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -642,23 +642,23 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "cd1309ba-1ccc-43a0-ab49-c16c13802532",
-                            RoleId = "819c9655-f11d-4da8-94b3-20f7588ae38b"
+                            UserId = "93f6c7d9-995e-4df9-91eb-cb68a3c574ad",
+                            RoleId = "d082f831-f121-4322-b8cf-166f024829b5"
                         },
                         new
                         {
-                            UserId = "58e96ed3-d011-48ee-8515-29648530d978",
-                            RoleId = "ea97dd5a-634b-435c-94ca-184a69474aa0"
+                            UserId = "0a504a4e-049b-4225-bd60-1ed443f11d1c",
+                            RoleId = "7666b720-0d88-48d6-827c-e7b90613817e"
                         },
                         new
                         {
-                            UserId = "baa27d2d-072c-44fd-b5b7-57fed1e51ba8",
-                            RoleId = "819c9655-f11d-4da8-94b3-20f7588ae38b"
+                            UserId = "0ec4f3b8-6e22-4b43-99c3-5425a486fc1a",
+                            RoleId = "d082f831-f121-4322-b8cf-166f024829b5"
                         },
                         new
                         {
-                            UserId = "c047b370-9034-4a1a-9c0f-855af92c7a85",
-                            RoleId = "819c9655-f11d-4da8-94b3-20f7588ae38b"
+                            UserId = "6cf5c757-e938-4e7e-8341-5284daced81a",
+                            RoleId = "d082f831-f121-4322-b8cf-166f024829b5"
                         });
                 });
 
@@ -723,7 +723,8 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasOne("BackESPD.Domain.Entities.User", "IdUserNavigation")
                         .WithMany("FormatPTAPForms")
-                        .HasForeignKey("IdUser")
+                        .HasForeignKey("NationalIdentificationNumber")
+                        .HasPrincipalKey("NationalIdentificationNumber")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

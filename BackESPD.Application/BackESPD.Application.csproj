@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\FormatPTAPForms\Commands\DeleteFormatPTAPForm\" />
+    <Folder Include="Features\FormatPTAPForms\Commands\UpdateFormatPTAPForm\" />
+    <Folder Include="Features\FormatPTAPForms\Queries\GetByIdFormatPTAPForm\" />
     <Folder Include="Features\Users\Commands\" />
     <Folder Include="Features\Users\Querys\GetByIdUser\" />
   </ItemGroup>

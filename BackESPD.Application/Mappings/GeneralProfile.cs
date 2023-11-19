@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using BackESPD.Application.DTOs.ActivityLogsForm;
 using BackESPD.Application.DTOs.DamageReport;
+using BackESPD.Application.DTOs.FormatPTAPForm;
 using BackESPD.Application.DTOs.Plant;
 using BackESPD.Application.DTOs.Users;
 using BackESPD.Application.Features.ActivityLogsForms.Commands.CreateActivityLogsForm;
 using BackESPD.Application.Features.DamageReports.Commands.CreateDamageReport;
+using BackESPD.Application.Features.FormatPTAPForms.Commands.CreateFormatPTAPForm;
 using BackESPD.Application.Features.Plants.Commands.CreatePlant;
 using BackESPD.Domain.Entities;
 
@@ -21,14 +23,9 @@ namespace BackESPD.Application.Mappings
             CreateMap<User, UserListDTO>().ReverseMap();
 
             #region ActivityLogsForm
-
             CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
-                .ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
-
-            //CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
-            //.ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
-            //.ForMember(activityLogsForm => activityLogsForm.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+            .ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+            .ForMember(activityLogsForm => activityLogsForm.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
 
 
 
@@ -41,6 +38,16 @@ namespace BackESPD.Application.Mappings
             CreateMap<Plant, PlantDto>().ReverseMap();
             CreateMap<CreatePlantCommand, Plant>();
             #endregion
+
+            #region FormatPTAPForm
+            CreateMap<FormatPTAPForm, FormatPTAPFormDto>().ReverseMap();
+            CreateMap<CreateFormatPTAPFormCommand, FormatPTAPForm>();
+
+
+            #endregion
+
+            
+
         }
     }
 }

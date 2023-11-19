@@ -22,8 +22,8 @@ namespace BackESPD.Persistense.Configuration
             builder.Property(P => P.ParticlesPerMillion).IsRequired();
 
             builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.FormatPTAPForms)
-                .HasForeignKey(p => p.IdUser)
-                .HasPrincipalKey(p => p.Id);
+                .HasForeignKey(p => p.NationalIdentificationNumber)
+                .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
             builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.FormatPTAPForm)
                 .HasForeignKey<FormatPTAPForm>(p => p.IdPlant)
