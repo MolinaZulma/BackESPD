@@ -2,10 +2,8 @@
 
 namespace BackESPD.Domain.Entities
 {
-    public class ActivityLogsForm
-    {
-        public int Id { get; set; }
-        public DateTime Date { get; set; }
+    public class ActivityLogsForm : AuditableBaseEntity
+    {        
         public string TypeActivity {  get; set; }
         public string Observations {  get; set; }
         public string IdUser {  get; set; }

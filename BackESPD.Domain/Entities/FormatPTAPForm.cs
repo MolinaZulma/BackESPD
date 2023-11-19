@@ -1,17 +1,9 @@
 ﻿using BackESPD.Domain.BaseEntity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BackESPD.Domain.Entities
 {
-    public class FormatPTAPForm
-    {
-        public int Id {  get; set; }
-        public DateTime Date {  get; set; }
+    public class FormatPTAPForm : AuditableBaseEntity
+    {        
         public string TypeWater {  get; set; }
         public double Temperature {  get; set; }
         public double AlkalinityPh {  get; set; }

@@ -10,7 +10,6 @@ namespace BackESPD.Persistense.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.ToTable(nameof(FormatPTAPForm));
-            builder.Property(P => P.Date).IsRequired();
             builder.Property(P => P.TypeWater).IsRequired();
             builder.Property(P => P.Temperature).IsRequired();
             builder.Property(P => P.AlkalinityPh).IsRequired();

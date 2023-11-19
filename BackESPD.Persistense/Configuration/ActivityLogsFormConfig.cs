@@ -10,13 +10,12 @@ namespace BackESPD.Persistense.Configuration
         {
            builder.HasKey(x => x.Id);
            builder.ToTable(nameof(ActivityLogsForm));
-           builder.Property(P => P.Date).IsRequired();
            builder.Property(P => P.TypeActivity).HasMaxLength(300).IsRequired();
            builder.Property(P => P.Observations).HasMaxLength(300).IsRequired();
 
            builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.ActivityLogsForm)
                .HasForeignKey(p => p.IdUser)
-               .HasPrincipalKey(p => p.Id);
+               .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
             builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.ActivityLogsForm)
                 .HasForeignKey<ActivityLogsForm>(p => p.IdPlant)
@@ -24,3 +23,4 @@ namespace BackESPD.Persistense.Configuration
         }
     }
 }
+

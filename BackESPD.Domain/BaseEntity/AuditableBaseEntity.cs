@@ -2,7 +2,8 @@
 {
     public class AuditableBaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int Id { get; set; }        
+        public DateTime CreatedDate { get; set; }
+        public DateTime? LastModifiedDate { get; set; }
     }
 }

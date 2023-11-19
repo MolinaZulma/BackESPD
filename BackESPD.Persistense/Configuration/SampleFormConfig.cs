@@ -1,11 +1,6 @@
 ﻿using BackESPD.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BackESPD.Persistense.Configuration
 {
@@ -16,7 +11,6 @@ namespace BackESPD.Persistense.Configuration
             builder.HasKey(x => x.Id);
             builder.ToTable(nameof(SampleForm));
             builder.Property(P => P.SampleNumber).IsRequired();
-            builder.Property(P => P.Date).IsRequired();
             builder.Property(P => P.MediumFlow).IsRequired();
             builder.Property(P => P.TemperatureC ).IsRequired();
             builder.Property(P => P.Ph ).IsRequired();

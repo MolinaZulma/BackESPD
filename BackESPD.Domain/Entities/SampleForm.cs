@@ -4,8 +4,7 @@ namespace BackESPD.Domain.Entities
 {
     public class SampleForm : AuditableBaseEntity
     {
-        public int SampleNumber {  get; set; }
-        public DateTime Date {  get; set; }
+        public int SampleNumber {  get; set; }     
         public double MediumFlow {  get; set; }
         public double TemperatureC {  get; set; }
         public double Ph { get; set;}

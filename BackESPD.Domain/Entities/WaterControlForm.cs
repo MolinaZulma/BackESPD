@@ -1,9 +1,9 @@
-﻿namespace BackESPD.Domain.Entities
+﻿using BackESPD.Domain.BaseEntity;
+
+namespace BackESPD.Domain.Entities
 {
-    public class WaterControlForm
+    public class WaterControlForm : AuditableBaseEntity
     {
-        public int Id { get; set; }
-        public DateTime Date { get; set; }
         public double TotalHours { get; set; }
         public double AmountWaterCaptured { get; set; }
         public double AmountWaterSupplied { get; set; }

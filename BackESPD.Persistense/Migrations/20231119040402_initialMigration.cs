@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BackESPD.Persistense.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class initialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +32,7 @@ namespace BackESPD.Persistense.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -50,6 +52,7 @@ namespace BackESPD.Persistense.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                    table.UniqueConstraint("AK_AspNetUsers_NationalIdentificationNumber", x => x.NationalIdentificationNumber);
                 });
 
             migrationBuilder.CreateTable(
@@ -58,10 +61,12 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     TypePlant = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     Direction = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -180,21 +185,23 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AddressDamage = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DescriptionDamage = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    AddressDamage = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    DescriptionDamage = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TrueInformation = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
                     TypeDamage = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    NationalIdentificationNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DamageReport", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_DamageReport_AspNetUsers_IdUser",
-                        column: x => x.IdUser,
+                        name: "FK_DamageReport_AspNetUsers_NationalIdentificationNumber",
+                        column: x => x.NationalIdentificationNumber,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
+                        principalColumn: "NationalIdentificationNumber",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -204,11 +211,12 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TypeActivity = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     Observations = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdPlant = table.Column<int>(type: "int", nullable: false)
+                    IdPlant = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -217,7 +225,7 @@ namespace BackESPD.Persistense.Migrations
                         name: "FK_ActivityLogsForm_AspNetUsers_IdUser",
                         column: x => x.IdUser,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
+                        principalColumn: "NationalIdentificationNumber",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ActivityLogsForm_Plant_IdPlant",
@@ -233,7 +241,6 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TypeWater = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Temperature = table.Column<double>(type: "float", nullable: false),
                     AlkalinityPh = table.Column<double>(type: "float", nullable: false),
@@ -245,7 +252,9 @@ namespace BackESPD.Persistense.Migrations
                     ChlorineGas = table.Column<double>(type: "float", nullable: false),
                     ParticlesPerMillion = table.Column<double>(type: "float", nullable: false),
                     IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdPlant = table.Column<int>(type: "int", nullable: false)
+                    IdPlant = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -270,13 +279,13 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     JarConcentration = table.Column<int>(type: "int", nullable: false),
                     JarOptime = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
                     PhJar = table.Column<int>(type: "int", nullable: false),
                     IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdPlant = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -302,7 +311,6 @@ namespace BackESPD.Persistense.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SampleNumber = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     MediumFlow = table.Column<double>(type: "float", nullable: false),
                     TemperatureC = table.Column<double>(type: "float", nullable: false),
                     Ph = table.Column<double>(type: "float", nullable: false),
@@ -310,7 +318,8 @@ namespace BackESPD.Persistense.Migrations
                     SiftingWeightKilos = table.Column<double>(type: "float", nullable: false),
                     IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     IdPlant = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -335,7 +344,6 @@ namespace BackESPD.Persistense.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TotalHours = table.Column<double>(type: "float", nullable: false),
                     AmountWaterCaptured = table.Column<double>(type: "float", nullable: false),
                     AmountWaterSupplied = table.Column<double>(type: "float", nullable: false),
@@ -344,7 +352,9 @@ namespace BackESPD.Persistense.Migrations
                     ChlorineGas = table.Column<double>(type: "float", nullable: false),
                     ParticlesPerMillion = table.Column<double>(type: "float", nullable: false),
                     IdUser = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    IdPlant = table.Column<int>(type: "int", nullable: false)
+                    IdPlant = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -361,6 +371,37 @@ namespace BackESPD.Persistense.Migrations
                         principalTable: "Plant",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "c2843618-4d3c-4f54-bdbd-c716135a330e", null, "User", "USER" },
+                    { "d3530889-f8a1-4ff6-adf9-697a37e66c1e", null, "Administrator", "ADMINISTRATOR" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FullName", "LockoutEnabled", "LockoutEnd", "NationalIdentificationNumber", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[,]
+                {
+                    { "3a53b719-bc11-4d34-b158-7650fcae5394", 0, "b83b2abd-f48c-469f-840e-1efd35db7d18", "mar@gmail.com", false, "mar", false, new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7283), new TimeSpan(0, 0, 0, 0, 0)), "1017182914", "MAR@GMAIL.COM", "MAR@GMAIL.COM", "AQAAAAIAAYagAAAAEH9vZuVOq5ZjQI3T89HA+SVb3OPLvKjBLquGxc7MHKvs3Hnsp9IfdQHW92eua83ASw==", "11111111", false, "65b31175-7f5d-4363-bbdb-4bf51de01679", false, "mar@gmail.com" },
+                    { "87e241e3-cd79-4816-8211-9308e9aa262f", 0, "fb9ed3e3-6de3-445a-bea7-003941e66637", "esteban@gmail.com", false, "esteban", false, new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7323), new TimeSpan(0, 0, 0, 0, 0)), "1017123503", "ESTEBAN@GMAIL.COM", "ESTEBAN@GMAIL.COM", "AQAAAAIAAYagAAAAEOAd74Hyx7vDfh1r5wDrQquzugqPeLu25ZaMdupRnaXfMLqjoLHVCfipMPooVFP1DA==", "11111111", false, "0e6e70eb-021d-4188-bf47-d552b90dfe1f", false, "esteban@gmail.com" },
+                    { "8aca8312-84b6-410e-8e48-fb79fa8d4cd6", 0, "73ede30a-7e50-49ea-abda-bc36854aa200", "nieves@gmail.com", false, "nieves", false, new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7340), new TimeSpan(0, 0, 0, 0, 0)), "1017123111", "NIEVES@GMAIL.COM", "NIEVES@GMAIL.COM", "AQAAAAIAAYagAAAAEFmDtl1bK549sCn6ZrPfbyKJGj8nvU54AiThQBXz8N3yf6XpoB49NhSCURHGZcJMAw==", "11111111", false, "3f13ece7-2a32-498d-bb15-0751cbf50c90", false, "nieves@gmail.com" },
+                    { "a42921d9-ae8e-49c3-ab07-9038b41e58ed", 0, "dc79bd80-77c5-405b-a92b-799b78d74089", "sara@gmail.com", false, "sara", false, new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7333), new TimeSpan(0, 0, 0, 0, 0)), "1017123700", "SARA@GMAIL.COM", "SARA@GMAIL.COM", "AQAAAAIAAYagAAAAEFHILKE3GEQ7gdJBwjVvhpCKmrXHbzh5pxuexeZ2QJIhRjZ7maws5vXh7ylW4ukvtw==", "11111111", false, "9629340c-35ad-405f-b5b9-8f379dbabd5e", false, "sara@gmail.com" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[,]
+                {
+                    { "d3530889-f8a1-4ff6-adf9-697a37e66c1e", "3a53b719-bc11-4d34-b158-7650fcae5394" },
+                    { "c2843618-4d3c-4f54-bdbd-c716135a330e", "87e241e3-cd79-4816-8211-9308e9aa262f" },
+                    { "d3530889-f8a1-4ff6-adf9-697a37e66c1e", "8aca8312-84b6-410e-8e48-fb79fa8d4cd6" },
+                    { "d3530889-f8a1-4ff6-adf9-697a37e66c1e", "a42921d9-ae8e-49c3-ab07-9038b41e58ed" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -414,9 +455,9 @@ namespace BackESPD.Persistense.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DamageReport_IdUser",
+                name: "IX_DamageReport_NationalIdentificationNumber",
                 table: "DamageReport",
-                column: "IdUser");
+                column: "NationalIdentificationNumber");
 
             migrationBuilder.CreateIndex(
                 name: "IX_FormatPTAPForm_IdPlant",

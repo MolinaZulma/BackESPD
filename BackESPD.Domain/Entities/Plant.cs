@@ -4,6 +4,7 @@ namespace BackESPD.Domain.Entities
 {
     public class Plant : AuditableBaseEntity
     {
+        public string Name { get; set; }
         public string TypePlant {  get; set; }
         public string Direction { get; set; }
         public string Description { get; set; }

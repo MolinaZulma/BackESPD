@@ -30,7 +30,7 @@ namespace BackESPD.Persistense.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlant")
@@ -39,6 +39,9 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<string>("IdUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Observations")
                         .IsRequired()
@@ -73,18 +76,24 @@ namespace BackESPD.Persistense.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("DescriptionDamage")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("IdUser")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NationalIdentificationNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TrueInformation")
                         .IsRequired()
@@ -98,7 +107,7 @@ namespace BackESPD.Persistense.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdUser");
+                    b.HasIndex("NationalIdentificationNumber");
 
                     b.ToTable("DamageReport", (string)null);
                 });
@@ -132,7 +141,7 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<double>("ChlorineGas")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlant")
@@ -141,6 +150,9 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<string>("IdUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("ParticlesPerMillion")
                         .HasColumnType("float");
@@ -170,7 +182,7 @@ namespace BackESPD.Persistense.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlant")
@@ -188,9 +200,8 @@ namespace BackESPD.Persistense.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("PhJar")
                         .HasColumnType("int");
@@ -213,6 +224,9 @@ namespace BackESPD.Persistense.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -223,9 +237,13 @@ namespace BackESPD.Persistense.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("TypePlant")
                         .IsRequired()
@@ -248,7 +266,7 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<double>("CreamWeightKilos")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlant")
@@ -258,12 +276,11 @@ namespace BackESPD.Persistense.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<double>("MediumFlow")
                         .HasColumnType("float");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Ph")
                         .HasColumnType("float");
@@ -363,81 +380,81 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "8910b2fd-4a8c-4ddf-a0ff-17b1f491fb2a",
+                            Id = "3a53b719-bc11-4d34-b158-7650fcae5394",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d2397b56-56d9-4bc3-b807-e25dcfd1c633",
+                            ConcurrencyStamp = "b83b2abd-f48c-469f-840e-1efd35db7d18",
                             Email = "mar@gmail.com",
                             EmailConfirmed = false,
                             FullName = "mar",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 20, 0, 53, 135, DateTimeKind.Unspecified).AddTicks(8758), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7283), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017182914",
                             NormalizedEmail = "MAR@GMAIL.COM",
                             NormalizedUserName = "MAR@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEZbq/VVASj/wzVb4+8P5PLzumKjB6ftd25oznOLXLx8KSjSN+tStT4hN+HvsenDkw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEH9vZuVOq5ZjQI3T89HA+SVb3OPLvKjBLquGxc7MHKvs3Hnsp9IfdQHW92eua83ASw==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4fa86e1c-354d-49b3-9278-f59c6e75fa7a",
+                            SecurityStamp = "65b31175-7f5d-4363-bbdb-4bf51de01679",
                             TwoFactorEnabled = false,
                             UserName = "mar@gmail.com"
                         },
                         new
                         {
-                            Id = "5a6f583e-7c21-4349-9018-55b14c7708d9",
+                            Id = "87e241e3-cd79-4816-8211-9308e9aa262f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f14cedad-e43c-4318-b5fa-9365227395e2",
+                            ConcurrencyStamp = "fb9ed3e3-6de3-445a-bea7-003941e66637",
                             Email = "esteban@gmail.com",
                             EmailConfirmed = false,
                             FullName = "esteban",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 20, 0, 53, 135, DateTimeKind.Unspecified).AddTicks(8791), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7323), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123503",
                             NormalizedEmail = "ESTEBAN@GMAIL.COM",
                             NormalizedUserName = "ESTEBAN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEgnwm8YY5THAgcLafO+eEu7ZoX5ensAnJFKsvOIlHpUYno/d+gHXNK+02C0wXYpuA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOAd74Hyx7vDfh1r5wDrQquzugqPeLu25ZaMdupRnaXfMLqjoLHVCfipMPooVFP1DA==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "51328027-b300-4c2b-b612-07b81e94fe85",
+                            SecurityStamp = "0e6e70eb-021d-4188-bf47-d552b90dfe1f",
                             TwoFactorEnabled = false,
                             UserName = "esteban@gmail.com"
                         },
                         new
                         {
-                            Id = "da775b18-1fb2-4b5b-b296-4368fe04800f",
+                            Id = "a42921d9-ae8e-49c3-ab07-9038b41e58ed",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ff21d445-1890-47b7-a0d9-3ae09eecc668",
+                            ConcurrencyStamp = "dc79bd80-77c5-405b-a92b-799b78d74089",
                             Email = "sara@gmail.com",
                             EmailConfirmed = false,
                             FullName = "sara",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 20, 0, 53, 135, DateTimeKind.Unspecified).AddTicks(8803), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7333), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123700",
                             NormalizedEmail = "SARA@GMAIL.COM",
                             NormalizedUserName = "SARA@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECI0+njFsn97nW87wb7oeDmX+P4uEyXZ1qVrXM3EyTUDyOZTI6PQz/3/K78pFWXaXw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFHILKE3GEQ7gdJBwjVvhpCKmrXHbzh5pxuexeZ2QJIhRjZ7maws5vXh7ylW4ukvtw==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cd27c2c8-2ace-477b-9f2b-38060ad6e3b9",
+                            SecurityStamp = "9629340c-35ad-405f-b5b9-8f379dbabd5e",
                             TwoFactorEnabled = false,
                             UserName = "sara@gmail.com"
                         },
                         new
                         {
-                            Id = "583121cd-1937-460c-8809-5bbce66289e9",
+                            Id = "8aca8312-84b6-410e-8e48-fb79fa8d4cd6",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6de3a397-d4e2-4d32-b9f9-b3c97c151942",
+                            ConcurrencyStamp = "73ede30a-7e50-49ea-abda-bc36854aa200",
                             Email = "nieves@gmail.com",
                             EmailConfirmed = false,
                             FullName = "nieves",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 13, 20, 0, 53, 135, DateTimeKind.Unspecified).AddTicks(8811), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 19, 4, 4, 1, 822, DateTimeKind.Unspecified).AddTicks(7340), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123111",
                             NormalizedEmail = "NIEVES@GMAIL.COM",
                             NormalizedUserName = "NIEVES@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEId5vRwT1bEdqfR6Opokql/KD0UdmwAiA7iT7zvBch+ykqHbh+toypd2IJYm40Ix/g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFmDtl1bK549sCn6ZrPfbyKJGj8nvU54AiThQBXz8N3yf6XpoB49NhSCURHGZcJMAw==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fc40e0fc-7ec9-45fc-b970-5cb4c9f0b7bd",
+                            SecurityStamp = "3f13ece7-2a32-498d-bb15-0751cbf50c90",
                             TwoFactorEnabled = false,
                             UserName = "nieves@gmail.com"
                         });
@@ -463,7 +480,7 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<double>("ChlorineGas")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("IdPlant")
@@ -472,6 +489,9 @@ namespace BackESPD.Persistense.Migrations
                     b.Property<string>("IdUser")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("ParticlesPerMillion")
                         .HasColumnType("float");
@@ -521,13 +541,13 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b74068d1-00bc-4450-9685-b6f11cd6a567",
+                            Id = "d3530889-f8a1-4ff6-adf9-697a37e66c1e",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "87901e2a-b3d7-4fce-aaa8-46b0c4f0309c",
+                            Id = "c2843618-4d3c-4f54-bdbd-c716135a330e",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -622,23 +642,23 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "8910b2fd-4a8c-4ddf-a0ff-17b1f491fb2a",
-                            RoleId = "b74068d1-00bc-4450-9685-b6f11cd6a567"
+                            UserId = "3a53b719-bc11-4d34-b158-7650fcae5394",
+                            RoleId = "d3530889-f8a1-4ff6-adf9-697a37e66c1e"
                         },
                         new
                         {
-                            UserId = "5a6f583e-7c21-4349-9018-55b14c7708d9",
-                            RoleId = "87901e2a-b3d7-4fce-aaa8-46b0c4f0309c"
+                            UserId = "87e241e3-cd79-4816-8211-9308e9aa262f",
+                            RoleId = "c2843618-4d3c-4f54-bdbd-c716135a330e"
                         },
                         new
                         {
-                            UserId = "da775b18-1fb2-4b5b-b296-4368fe04800f",
-                            RoleId = "b74068d1-00bc-4450-9685-b6f11cd6a567"
+                            UserId = "a42921d9-ae8e-49c3-ab07-9038b41e58ed",
+                            RoleId = "d3530889-f8a1-4ff6-adf9-697a37e66c1e"
                         },
                         new
                         {
-                            UserId = "583121cd-1937-460c-8809-5bbce66289e9",
-                            RoleId = "b74068d1-00bc-4450-9685-b6f11cd6a567"
+                            UserId = "8aca8312-84b6-410e-8e48-fb79fa8d4cd6",
+                            RoleId = "d3530889-f8a1-4ff6-adf9-697a37e66c1e"
                         });
                 });
 
@@ -672,6 +692,7 @@ namespace BackESPD.Persistense.Migrations
                     b.HasOne("BackESPD.Domain.Entities.User", "IdUserNavigation")
                         .WithMany("ActivityLogsForm")
                         .HasForeignKey("IdUser")
+                        .HasPrincipalKey("NationalIdentificationNumber")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -684,7 +705,7 @@ namespace BackESPD.Persistense.Migrations
                 {
                     b.HasOne("BackESPD.Domain.Entities.User", "IdUserNavigation")
                         .WithMany("DamageReport")
-                        .HasForeignKey("IdUser")
+                        .HasForeignKey("NationalIdentificationNumber")
                         .HasPrincipalKey("NationalIdentificationNumber")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

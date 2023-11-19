@@ -8,7 +8,7 @@
         public string Image { get; set; }
         public string TrueInformation { get; set; }
         public string TypeDamage { get; set; }
-        public string IdUser { get; set; }
+        public string NationalIdentificationNumber { get; set; }
         public string userFullName { get; set; }
     }
 }

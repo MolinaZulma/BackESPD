@@ -14,6 +14,7 @@ namespace BackESPD.Application.Features.DamageReports.Commands.UpdateDamageRepor
         public string DescriptionDamage { get; set; }
         public string Image { get; set; }
         public string TrueInformation { get; set; }
+        public string NationalIdentificationNumber { get; set; }
         public string TypeDamage { get; set; }
     }
 
@@ -41,6 +42,7 @@ namespace BackESPD.Application.Features.DamageReports.Commands.UpdateDamageRepor
                     damageReport.Image = request.Image;
                     damageReport.TrueInformation = request.TrueInformation;
                     damageReport.TypeDamage = request.TypeDamage;
+                    damageReport.NationalIdentificationNumber = request.NationalIdentificationNumber;
 
                 await _repositoryAsync.UpdateAsync(damageReport);
                 await _repositoryAsync.SaveChangesAsync();
