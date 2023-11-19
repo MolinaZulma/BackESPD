@@ -19,8 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\ActivityLogsForms\Queries\GetAllActivityLogsForm\" />
-    <Folder Include="Features\ActivityLogsForms\Queries\GetByIdActivityLogsForm\" />
     <Folder Include="Features\Users\Commands\" />
     <Folder Include="Features\Users\Querys\GetByIdUser\" />
   </ItemGroup>

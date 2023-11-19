@@ -14,7 +14,7 @@ namespace BackESPD.Persistense.Configuration
            builder.Property(P => P.Observations).HasMaxLength(300).IsRequired();
 
            builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.ActivityLogsForm)
-               .HasForeignKey(p => p.IdUser)
+               .HasForeignKey(p => p.NationalIdentificationNumber)
                .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
             builder.HasOne(p => p.IdPlantNavigation).WithOne(p => p.ActivityLogsForm)

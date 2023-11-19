@@ -20,9 +20,22 @@ namespace BackESPD.Application.Mappings
 
             CreateMap<User, UserListDTO>().ReverseMap();
 
+            #region ActivityLogsForm
+
+            CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
+                .ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
+
             //CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
-            //    .ForMember(damageReport => damageReport.userFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName));
+            //.ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+            //.ForMember(activityLogsForm => activityLogsForm.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
+
+
+
+            CreateMap<ActivityLogsForm, ActivityLogsFormDto>().ReverseMap();
             CreateMap<CreateActivityLogsFormCommand, ActivityLogsForm>();
+            #endregion
 
             #region Plant
             CreateMap<Plant, PlantDto>().ReverseMap();

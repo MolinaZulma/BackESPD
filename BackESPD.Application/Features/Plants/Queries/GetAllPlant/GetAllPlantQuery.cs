@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using BackESPD.Application.DTOs.DamageReport;
 using BackESPD.Application.DTOs.Plant;
 using BackESPD.Application.Interfaces;
 using BackESPD.Application.Wrappers;

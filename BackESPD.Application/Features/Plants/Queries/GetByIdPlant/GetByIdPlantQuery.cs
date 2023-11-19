@@ -31,7 +31,7 @@ namespace BackESPD.Application.Features.Plants.Queries.GetByIdPlant
                 if (plant == null)
                     throw new KeyNotFoundException($"Plant con el id: {request.Id} no existe");
 
-                return new GenericResponse<PlantDto>(_mapper.Map<PlantDto>(plant));
+                return new GenericResponse<PlantDto>(_mapper.Map<PlantDto>(plant)); 
             }
             catch (Exception)
             {
