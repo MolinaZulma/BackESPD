@@ -30,15 +30,13 @@ namespace BackESPD.Application.Mappings
             CreateMap<User, UserListDTO>().ReverseMap();
 
             #region ActivityLogsForm
-            CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
-            .ForMember(activityLogsForm => activityLogsForm.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
-            .ForMember(activityLogsForm => activityLogsForm.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
-
-
-
             CreateMap<ActivityLogsForm, ActivityLogsFormDto>().ReverseMap();
             CreateMap<CreateActivityLogsFormCommand, ActivityLogsForm>();
+
+            CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
+               .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+               .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
             #endregion
 
             #region Plant
@@ -49,6 +47,10 @@ namespace BackESPD.Application.Mappings
             #region FormatPTAPForm
             CreateMap<FormatPTAPForm, FormatPTAPFormDto>().ReverseMap();
             CreateMap<CreateFormatPTAPFormCommand, FormatPTAPForm>();
+            CreateMap<FormatPTAPForm, FormatPTAPFormDto>()
+           .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+           .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
             #endregion
 
 
@@ -65,6 +67,9 @@ namespace BackESPD.Application.Mappings
             #region SampleForm
             CreateMap<SampleForm, SampleFormDto>().ReverseMap();
             CreateMap<CreateSampleFormCommand, SampleForm>();
+            CreateMap<JarFormatForm, JarFormatFormDto>()
+              .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+              .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
             #endregion
 
             #region WaterControlForm

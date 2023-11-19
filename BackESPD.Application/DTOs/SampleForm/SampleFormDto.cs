@@ -9,7 +9,9 @@
         public double Ph { get; set; }
         public double CreamWeightKilos { get; set; }
         public double SiftingWeightKilos { get; set; }
-        public string IdUNationalIdentificationNumber { get; set; }
+        public string NationalIdentificationNumber { get; set; }
+        public string UserFullName { get; set; }
         public int IdPlant { get; set; }
+        public string NamePlant { get; set; }
     }
 }

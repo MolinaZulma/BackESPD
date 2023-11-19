@@ -324,3 +324,4 @@ C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\ru\Microsoft.
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\obj\Debug\net7.0\BackESPDWebAPI.MvcApplicationPartsAssemblyInfo.cs

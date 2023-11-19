@@ -10,6 +10,9 @@
         public double ChlorineGas { get; set; }
         public double ParticlesPerMillion { get; set; }
         public string NationalIdentificationNumber { get; set; }
+        public string UserFullName { get; set; }
         public int IdPlant { get; set; }
+        public string NamePlant { get; set; }
+
     }
 }

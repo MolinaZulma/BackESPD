@@ -15,7 +15,7 @@ namespace BackESPD.Application.Features.SampleForms.Commands.CreateSampleForm
         public double Ph { get; set; }
         public double CreamWeightKilos { get; set; }
         public double SiftingWeightKilos { get; set; }
-        public string IdUNationalIdentificationNumber { get; set; }
+        public string NationalIdentificationNumber { get; set; }
         public int IdPlant { get; set; }
     }
 

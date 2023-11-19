@@ -17,7 +17,7 @@ namespace BackESPD.Persistense.Configuration
             builder.Property(P => P.CreamWeightKilos ).IsRequired();
             builder.Property(P => P.SiftingWeightKilos ).IsRequired();
             builder.HasOne(p => p.IdUserNavigation).WithMany(p => p.SampleForm)
-               .HasForeignKey(p => p.IdUNationalIdentificationNumber)
+               .HasForeignKey(p => p.NationalIdentificationNumber)
                .HasPrincipalKey(p => p.NationalIdentificationNumber);
 
             builder.HasOne(p => p.IdPlantNavigation).WithMany(p => p.SampleForm)
