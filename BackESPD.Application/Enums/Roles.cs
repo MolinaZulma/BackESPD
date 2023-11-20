@@ -3,6 +3,8 @@
     public enum Roles
     {
         Administrator,
-        User
+        User,
+        Ptap,
+        Ptar
     }
 }

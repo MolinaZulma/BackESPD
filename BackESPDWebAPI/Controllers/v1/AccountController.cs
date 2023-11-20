@@ -1,6 +1,7 @@
 ﻿using BackESPD.Application.DTOs.Users.Account;
 using BackESPD.Application.Features.Authenticate.AuthenticateCommand;
 using BackESPD.Application.Features.Authenticate.RegisterCommand;
+using BackESPD.Application.Features.Users.Commands.DeleteUser;
 using BackESPD.Application.Features.Users.Querys.GetAllUser;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,13 +53,7 @@ namespace BackESPDWebAPI.Controllers.v1
             }
         }
 
-        //Esta aqui temporalmente   
-        [HttpGet]
-        [Route("users/getAll")]
-        public async Task<IActionResult> GetAll()
-        {
-            return Ok(await Mediator.Send(new GetAllUserQuery()));
-        }
+      
 
     }
 }

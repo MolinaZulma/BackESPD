@@ -18,9 +18,4 @@
     <ProjectReference Include="..\BackESPD.Domain\BackESPD.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Users\Commands\" />
-    <Folder Include="Features\Users\Querys\GetByIdUser\" />
-  </ItemGroup>
-
 </Project>

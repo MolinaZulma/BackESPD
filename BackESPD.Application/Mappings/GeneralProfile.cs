@@ -16,6 +16,7 @@ using BackESPD.Application.Features.Plants.Commands.CreatePlant;
 using BackESPD.Application.Features.SampleForms.Commands.CreateSampleForm;
 using BackESPD.Application.Features.WaterControlForms.Commands.CreateWaterControlForm;
 using BackESPD.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace BackESPD.Application.Mappings
 {
@@ -36,7 +37,6 @@ namespace BackESPD.Application.Mappings
             CreateMap<ActivityLogsForm, ActivityLogsFormDto>()
                .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
                .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
             #endregion
 
             #region Plant
@@ -50,7 +50,6 @@ namespace BackESPD.Application.Mappings
             CreateMap<FormatPTAPForm, FormatPTAPFormDto>()
            .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
            .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
             #endregion
 
 
@@ -61,15 +60,15 @@ namespace BackESPD.Application.Mappings
             CreateMap<JarFormatForm, JarFormatFormDto>()
             .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
             .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
             #endregion
 
             #region SampleForm
             CreateMap<SampleForm, SampleFormDto>().ReverseMap();
             CreateMap<CreateSampleFormCommand, SampleForm>();
-            CreateMap<JarFormatForm, JarFormatFormDto>()
-              .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
-              .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
+            CreateMap<SampleForm, SampleFormDto>()
+             .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+             .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
             #endregion
 
             #region WaterControlForm
@@ -78,11 +77,10 @@ namespace BackESPD.Application.Mappings
             CreateMap<WaterControlForm, WaterControlFormDto>()
               .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
               .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
-
             #endregion
 
             #region AspNetRoles
-            CreateMap<Roles, AspNetRolesDto>().ReverseMap();
+            CreateMap<IdentityRole, AspNetRolesDto>().ReverseMap();
             //CreateMap<CreateWaterControlFormCommand, WaterControlForm>();
             #endregion
 

@@ -1,4 +1,4 @@
-﻿using BackESPD.Domain.Entities;
+﻿    using BackESPD.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +11,9 @@ namespace BackESPD.Persistense.Seeds
             // Crear ROLES
             List<IdentityRole> roles = new List<IdentityRole>() {
                 new IdentityRole { Name = "Administrator", NormalizedName = "ADMINISTRATOR" },
-                new IdentityRole { Name = "User", NormalizedName = "USER" }
+                new IdentityRole { Name = "User", NormalizedName = "USER" },
+                new IdentityRole { Name = "Ptap", NormalizedName = "PTAP" },
+                new IdentityRole { Name = "Ptar", NormalizedName = "PTAR" }
             };
             modelBuilder.Entity<IdentityRole>().HasData(roles);
 
@@ -26,9 +28,7 @@ namespace BackESPD.Persistense.Seeds
                     NormalizedEmail = "MAR@GMAIL.COM",                                        
                     LockoutEnabled = false,
                     LockoutEnd = DateTime.UtcNow.AddYears(100),
-                    //EmailConfirmed = 
                     PhoneNumber = "11111111"
-                    //PhoneNumberConfirmed = 
                 },
                 new User {
                     NationalIdentificationNumber = "1017123503",

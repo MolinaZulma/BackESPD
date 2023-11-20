@@ -25,7 +25,6 @@ namespace BackESPD.Persistense.DbContext
         public virtual DbSet<JarFormatForm> JarFormatForm { get; set; }
         public virtual DbSet<SampleForm> SampleForm { get; set; }
         public virtual DbSet<WaterControlForm> WaterControlForm { get; set; }
-        public virtual DbSet<Roles> Roles { get; set; }
 
 
 
@@ -37,11 +36,9 @@ namespace BackESPD.Persistense.DbContext
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedDate = _dateTimeService.NowUtc;
-                        //entry.Entity.CreatedBy = "admin";
                         break;
                     case EntityState.Modified:
                         entry.Entity.LastModifiedDate = _dateTimeService.NowUtc;
-                        //entry.Entity.LastModifiedBy = "admin";
                         break;
                     default:
                         break;
@@ -49,7 +46,6 @@ namespace BackESPD.Persistense.DbContext
             }
             return base.SaveChangesAsync();
         }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
