@@ -78,7 +78,7 @@ namespace BackESPD.Persistense.Seeds
             userRoles.Add(new IdentityUserRole<string>
             {
                 UserId = users[0].Id,
-                RoleId = roles.First(q => q.Name == "Administrator").Id
+                RoleId = roles.First(q => q.Name == "PTAP").Id
             });
             userRoles.Add(new IdentityUserRole<string>
             {
@@ -88,7 +88,7 @@ namespace BackESPD.Persistense.Seeds
             userRoles.Add(new IdentityUserRole<string>
             {
                 UserId = users[2].Id,
-                RoleId = roles.First(q => q.Name == "Administrator").Id
+                RoleId = roles.First(q => q.Name == "PTAR").Id
             });
             userRoles.Add(new IdentityUserRole<string>
             {
