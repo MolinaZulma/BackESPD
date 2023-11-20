@@ -75,6 +75,10 @@ namespace BackESPD.Application.Mappings
             #region WaterControlForm
             CreateMap<WaterControlForm, WaterControlFormDto>().ReverseMap();
             CreateMap<CreateWaterControlFormCommand, WaterControlForm>();
+            CreateMap<WaterControlForm, WaterControlFormDto>()
+              .ForMember(p => p.UserFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName))
+              .ForMember(p => p.NamePlant, options => options.MapFrom(origin => origin.IdPlantNavigation.Name));
+
             #endregion
 
             #region AspNetRoles

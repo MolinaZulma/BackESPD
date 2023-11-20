@@ -2,6 +2,7 @@
 {
     public class WaterControlFormDto
     {
+        public int Id { get; set; }
         public double TotalHours { get; set; }
         public double AmountWaterCaptured { get; set; }
         public double AmountWaterSupplied { get; set; }
