@@ -28,7 +28,10 @@ namespace BackESPD.Application.Mappings
                 .ForMember(damageReport => damageReport.userFullName, options => options.MapFrom(origin => origin.IdUserNavigation.FullName));            
             CreateMap<CreateDamageReportCommand, DamageReport>();
 
+            #region Users
             CreateMap<User, UserListDTO>().ReverseMap();
+
+            #endregion
 
             #region ActivityLogsForm
             CreateMap<ActivityLogsForm, ActivityLogsFormDto>().ReverseMap();

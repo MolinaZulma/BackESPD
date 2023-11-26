@@ -1,4 +1,5 @@
 ﻿using BackESPD.Application.Features.SampleForms.Commands.UpdateSampleForm;
+using BackESPD.Application.Features.Users.Commands;
 using BackESPD.Application.Features.Users.Commands.DeleteUser;
 using BackESPD.Application.Features.Users.Commands.UpdateUser;
 using BackESPD.Application.Features.Users.Querys.GetAllUser;
@@ -22,11 +23,11 @@ namespace BackESPDWebAPI.Controllers.v1
             return Ok(await Mediator.Send(new GetByNationalIdentificationNumberUserCommand { NationalIdentificationNumber = NationalIdentificationNumber }));
         }
 
-        //[HttpPut]
-        //public async Task<IActionResult> Put(UpdateUserCommand entity)
-        //{
-        //    return Ok(await Mediator.Send(entity));
-        //}
+        [HttpPut]
+        public async Task<IActionResult> Put(UpdateUsers entity)
+        {
+            return Ok(await Mediator.Send(entity));
+        }
 
         [HttpDelete("id")]
         public async Task<IActionResult> Delete(string NationalIdentificationNumber)

@@ -44,7 +44,7 @@ namespace BackESPD.Persistense.Services
 
             if (!result.Succeeded)
             {
-                throw new ApiException($"Las credenciales del usuario no son validas  {request.Email}.");
+                throw new ApiException($"Email o contraseña erroneos  {request.Email}.");
             }
 
             JwtSecurityToken jwtSecurityToken = await GenerateJwtToken(usuario);
