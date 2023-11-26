@@ -376,81 +376,81 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "bba2613c-0367-4c16-973a-ac5dda299805",
+                            Id = "7de92b5e-4db8-4958-9a1a-4175f2f66228",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f215bc73-e3d0-4613-911e-6c4edba6aa79",
+                            ConcurrencyStamp = "6269f301-3dcf-4162-b6ca-2ace1ff5cf86",
                             Email = "mar@gmail.com",
                             EmailConfirmed = false,
                             FullName = "mar",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 20, 5, 20, 31, 503, DateTimeKind.Unspecified).AddTicks(3386), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 26, 5, 34, 14, 618, DateTimeKind.Unspecified).AddTicks(3819), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017182914",
                             NormalizedEmail = "MAR@GMAIL.COM",
                             NormalizedUserName = "MAR@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEN45SwIRc4oKawF06RF48Mia1389QYcj58hP3DoWhbf1gcdZem3tuMlos5Oz9ouClw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELvpLeGKZp1X60dGgCE2q9TMyBrEkmh1zrAZ/Swq5RLrFjDU1mCmelIql/NKGDY68Q==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "41f1188d-23f1-4b91-b648-e65ae1133d9d",
+                            SecurityStamp = "b0a91bea-d7ce-4472-9d22-75d28d9b1e26",
                             TwoFactorEnabled = false,
                             UserName = "mar@gmail.com"
                         },
                         new
                         {
-                            Id = "451fae64-a7ec-4ba5-bc97-58eea05d3818",
+                            Id = "75700239-41a2-47dd-8e2f-6e6d928f0569",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9a0872a7-fd1d-4ef6-b73d-d820e1545d2f",
+                            ConcurrencyStamp = "0f1c60e6-53a0-4991-a5d4-97c27cbb93cf",
                             Email = "esteban@gmail.com",
                             EmailConfirmed = false,
                             FullName = "esteban",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 20, 5, 20, 31, 503, DateTimeKind.Unspecified).AddTicks(3418), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 26, 5, 34, 14, 618, DateTimeKind.Unspecified).AddTicks(3851), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123503",
                             NormalizedEmail = "ESTEBAN@GMAIL.COM",
                             NormalizedUserName = "ESTEBAN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBW++Etq3G0k/oS3TbN9RmVrmH4yYCwGuWn4hrUqbGzvWc8JFzngENjaGAYCPQ0wEw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC641DYT6ywrRvXcB/xPCI/nBPL4f/dces4/FhHSTg4vIcX3egA86//Qryzzyvo6HQ==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "db893b83-389d-49cc-8178-0b6ee288535c",
+                            SecurityStamp = "f2c188ed-3c64-4394-9479-c7b5ce09a6af",
                             TwoFactorEnabled = false,
                             UserName = "esteban@gmail.com"
                         },
                         new
                         {
-                            Id = "d1395217-b8db-4225-8b61-a4c6821b5996",
+                            Id = "49d8083d-0478-4f98-924c-73dcfa54059c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "65d4fe9d-6c54-4a8c-8d4e-f5343100a39a",
+                            ConcurrencyStamp = "ab163f43-d742-4afa-8f6e-63582ea6e63e",
                             Email = "sara@gmail.com",
                             EmailConfirmed = false,
                             FullName = "sara",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 20, 5, 20, 31, 503, DateTimeKind.Unspecified).AddTicks(3426), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 26, 5, 34, 14, 618, DateTimeKind.Unspecified).AddTicks(3866), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123700",
                             NormalizedEmail = "SARA@GMAIL.COM",
                             NormalizedUserName = "SARA@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOfLAC2uXH4/lcdQDOypYInUYidHsV87vesjg1mRM7Qa+FoIcZP6NJPxsmAbA6WECw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHF4Hw3U2p+2mIeSVosE9/IS52aSd/fVz/W00+U+WdSoQdQY+pnb7NAOVbcOls1dYw==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f82b2456-c349-493b-93ee-584a9deb4b45",
+                            SecurityStamp = "0cbd3b07-02ab-478d-9c0e-3892cc0bf544",
                             TwoFactorEnabled = false,
                             UserName = "sara@gmail.com"
                         },
                         new
                         {
-                            Id = "746ba24b-13a5-4f35-8155-157227729447",
+                            Id = "40d9916d-0878-48c9-808f-f9ceacdabbff",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5d386392-aaca-4959-bf99-33ce206c8733",
+                            ConcurrencyStamp = "e9576dd0-86cf-4963-a864-3aa9efed8ff9",
                             Email = "nieves@gmail.com",
                             EmailConfirmed = false,
                             FullName = "nieves",
                             LockoutEnabled = false,
-                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 20, 5, 20, 31, 503, DateTimeKind.Unspecified).AddTicks(3473), new TimeSpan(0, 0, 0, 0, 0)),
+                            LockoutEnd = new DateTimeOffset(new DateTime(2123, 11, 26, 5, 34, 14, 618, DateTimeKind.Unspecified).AddTicks(3876), new TimeSpan(0, 0, 0, 0, 0)),
                             NationalIdentificationNumber = "1017123111",
                             NormalizedEmail = "NIEVES@GMAIL.COM",
                             NormalizedUserName = "NIEVES@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDTq7iW/tM2X5+6HEvkWzHmya2x6MDVywwwCXaLARcFvk04b1+A3fZw140yp6QU2cA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEB13SWgTtl85ESsxJE8RMjhnY9RZ1UM++sqQf/IbjiGFgXJSQuBSy44gFX9c32cQvA==",
                             PhoneNumber = "11111111",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "133547c5-6c92-4142-a05d-9e84dbc88976",
+                            SecurityStamp = "a71f1dad-8a77-4c36-919d-0279e5c1e6cc",
                             TwoFactorEnabled = false,
                             UserName = "nieves@gmail.com"
                         });
@@ -536,25 +536,25 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d3594500-4e63-46e4-a229-4d362caa9d4c",
+                            Id = "4a437b3e-a75f-42a0-8d06-3185f476406b",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "da16af62-6b8c-4f0f-b778-c20ed0b29862",
+                            Id = "094f0cfe-9c78-477f-8f92-c5fb9d98581e",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "4a42f37c-2f7c-46be-b7e6-5298f410c9b2",
+                            Id = "b9fee53d-4e32-4391-922e-0f4a2eb7f3b1",
                             Name = "Ptap",
                             NormalizedName = "PTAP"
                         },
                         new
                         {
-                            Id = "ec6adfd0-48c5-456d-a753-80d245e8faae",
+                            Id = "44a8a7a6-73ec-4173-8d5f-3d2e5ab93b87",
                             Name = "Ptar",
                             NormalizedName = "PTAR"
                         });
@@ -649,23 +649,23 @@ namespace BackESPD.Persistense.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "bba2613c-0367-4c16-973a-ac5dda299805",
-                            RoleId = "d3594500-4e63-46e4-a229-4d362caa9d4c"
+                            UserId = "7de92b5e-4db8-4958-9a1a-4175f2f66228",
+                            RoleId = "b9fee53d-4e32-4391-922e-0f4a2eb7f3b1"
                         },
                         new
                         {
-                            UserId = "451fae64-a7ec-4ba5-bc97-58eea05d3818",
-                            RoleId = "da16af62-6b8c-4f0f-b778-c20ed0b29862"
+                            UserId = "75700239-41a2-47dd-8e2f-6e6d928f0569",
+                            RoleId = "094f0cfe-9c78-477f-8f92-c5fb9d98581e"
                         },
                         new
                         {
-                            UserId = "d1395217-b8db-4225-8b61-a4c6821b5996",
-                            RoleId = "d3594500-4e63-46e4-a229-4d362caa9d4c"
+                            UserId = "49d8083d-0478-4f98-924c-73dcfa54059c",
+                            RoleId = "44a8a7a6-73ec-4173-8d5f-3d2e5ab93b87"
                         },
                         new
                         {
-                            UserId = "746ba24b-13a5-4f35-8155-157227729447",
-                            RoleId = "d3594500-4e63-46e4-a229-4d362caa9d4c"
+                            UserId = "40d9916d-0878-48c9-808f-f9ceacdabbff",
+                            RoleId = "4a437b3e-a75f-42a0-8d06-3185f476406b"
                         });
                 });
 
