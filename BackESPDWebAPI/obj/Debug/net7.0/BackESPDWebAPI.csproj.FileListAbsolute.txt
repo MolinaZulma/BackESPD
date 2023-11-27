@@ -332,3 +332,7 @@ C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\System.Securi
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\BackESPD.SendEmail.dll
 C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\BackESPD.SendEmail.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\EntityFramework.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPDWebAPI\bin\Debug\net7.0\Microsoft.AspNet.Identity.EntityFramework.dll

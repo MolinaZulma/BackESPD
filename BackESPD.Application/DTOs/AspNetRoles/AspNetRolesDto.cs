@@ -8,6 +8,7 @@ namespace BackESPD.Application.DTOs.AspNetRoles
 {
     public class AspNetRolesDto
     {
+        public string  Id { get; set; }
         public string  Name { get; set; }
     }
 }

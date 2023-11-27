@@ -9,11 +9,9 @@ namespace BackESPD.Application.Features.Users.Commands.UpdateUser
 {
     public class UpdateUserCommand : IRequest<GenericResponse<UserListDTO>>
     {
-        public string Id { get; set; }
         public string NationalIdentificationNumber { get; set; }
         public string Email { get; set; }
         public string FullName { get; set; }
-        public string Password { get; set; }
         public string PhoneNumber { get; set; }
     }
 
@@ -32,13 +30,17 @@ namespace BackESPD.Application.Features.Users.Commands.UpdateUser
         {
             try
             {
-                var user = await _repositoryAsync.GetAsync(tp => tp.Id == request.Id);
+                var user = await _repositoryAsync.GetAsync(tp => tp.NationalIdentificationNumber == request.NationalIdentificationNumber);
                 if (user == null)
-                    throw new KeyNotFoundException($"User con el NationalIdentificationNumber: {request.NationalIdentificationNumber} no existe");
+                    throw new KeyNotFoundException($"Usuario con cédula: {request.NationalIdentificationNumber} no existe");
 
 
-                user.NationalIdentificationNumber = request.NationalIdentificationNumber;
-
+                user.Email = request.Email;
+                user.NormalizedEmail = request.Email.ToUpper();
+                user.UserName = request.Email;
+                user.NormalizedUserName = request.Email.ToUpper();
+                user.FullName = request.FullName;
+                user.PhoneNumber = request.PhoneNumber;
 
                 await _repositoryAsync.UpdateAsync(user);
                 await _repositoryAsync.SaveChangesAsync();
