@@ -1,0 +1,17 @@
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.SendEmail.deps.json
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.SendEmail.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.SendEmail.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.Application.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.Domain.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.Application.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\bin\Debug\net7.0\BackESPD.Domain.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.csproj.AssemblyReference.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.AssemblyInfoInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.AssemblyInfo.cs
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.csproj.CoreCompileInputs.cache
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.csproj.CopyComplete
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\refint\BackESPD.SendEmail.dll
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\BackESPD.SendEmail.pdb
+C:\Users\marit\Escritorio\BackESPD\BackESPD.SendEmail\obj\Debug\net7.0\ref\BackESPD.SendEmail.dll

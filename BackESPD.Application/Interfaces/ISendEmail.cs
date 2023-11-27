@@ -1,7 +1,9 @@
-﻿namespace BackESPD.Application.Interfaces
+﻿using BackESPD.Application.DTOs.SendEmail;
+
+namespace BackESPD.Application.Interfaces
 {
     public interface ISendEmail
     {
-        //void SendEmail(EmailDto emailDto);
+        void SendEmail(EmailDto emailDto);
     }
 }

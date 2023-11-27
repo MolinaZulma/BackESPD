@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BackESPD.Application\BackESPD.Application.csproj" />
     <ProjectReference Include="..\BackESPD.Persistense\BackESPD.Persistense.csproj" />
+    <ProjectReference Include="..\BackESPD.SendEmail\BackESPD.SendEmail.csproj" />
     <ProjectReference Include="..\BackESPD.Shared\BackESPD.Shared.csproj" />
   </ItemGroup>
 

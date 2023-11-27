@@ -2,6 +2,7 @@ using BackESPD.Persistense;
 using BackESPDWebAPI.Extensions;
 using BackESPD.Application;
 using BackESPD.Shared;
+using BackESPD.SendEmail;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddIOCApplicationLayer();
 builder.Services.AddIOCPersintenceLayer(builder.Configuration);
 builder.Services.AddApiVesionExtensions();
 builder.Services.AddApiVesionExtensions();
+builder.Services.AddIOCSendEmailLayer(builder.Configuration);
 builder.Services.AddIOCApplicationLayerJWTDocumentation();
 builder.Services.AddIOCSharedLayer();
 
@@ -26,14 +28,6 @@ builder.Services.AddCors(p => p.AddPolicy("PolicyCors", build =>
     build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
-/*
-builder.Services.AddIOCApplicationLayerJWTDocumentation();
-builder.Services.AddIOCApplicationLayer();
-builder.Services.AddIOCPersintenceLayer(builder.Configuration);
-builder.Services.AddIOCSendEmailLayer(builder.Configuration);
-builder.Services.AddIOCSharedLayer();
-builder.Services.AddApiVesionExtensions();
-*/
 
 var app = builder.Build();
 
