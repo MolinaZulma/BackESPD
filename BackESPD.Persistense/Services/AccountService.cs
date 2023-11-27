@@ -1,4 +1,5 @@
-﻿using BackESPD.Application.DTOs.Users.Account;
+﻿using Azure.Core;
+using BackESPD.Application.DTOs.Users.Account;
 using BackESPD.Application.Exceptions;
 using BackESPD.Application.Interfaces;
 using BackESPD.Application.Wrappers;
@@ -157,7 +158,6 @@ namespace BackESPD.Persistense.Services
                 }
                 catch (Exception ex)
                 {
-                    // Asigna un mensaje de error personalizado a la excepción.
                     throw new Exception("Ocurrió un error al crear el usuario: " + ex.Message);
                 }
             }
@@ -181,5 +181,25 @@ namespace BackESPD.Persistense.Services
             rngCryptoServiceProvider.GetBytes(randomBytes);
             return BitConverter.ToString(randomBytes).Replace("-", "");
         }
+
+
+        public async Task<GenericResponse<string>> ChangeRole(string userId, string RoleName)
+        {
+            var usuario = await _userManager.FindByIdAsync(userId);
+
+            if (usuario == null)
+            {
+                throw new Exception($"Usuario con el Id {RoleName} no encontrado.");
+
+            }
+            var rolesActuales = await _userManager.GetRolesAsync(usuario);
+
+            await _userManager.RemoveFromRolesAsync(usuario, rolesActuales);
+
+            await _userManager.AddToRoleAsync(usuario, RoleName);
+
+            return new GenericResponse<string>($"Rol cambiado exitosamente");
+        }
+
     }
 }
