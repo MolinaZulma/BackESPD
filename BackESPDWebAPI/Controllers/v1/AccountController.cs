@@ -1,6 +1,7 @@
 ﻿using BackESPD.Application.DTOs.Users.Account;
 using BackESPD.Application.Features.Authenticate.AuthenticateCommand;
 using BackESPD.Application.Features.Authenticate.RegisterCommand;
+using BackESPD.Application.Features.Authenticate.ResetPasswordCommand;
 using BackESPD.Application.Features.Users.Commands;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,7 +51,7 @@ namespace BackESPDWebAPI.Controllers.v1
         }
 
         [HttpPut("reset-password")]
-        public async Task<IActionResult> Put(ResetPassword entity)
+        public async Task<IActionResult> Put(ResetPasswordCommand entity)
         {
             return Ok(await Mediator.Send(entity));
         }

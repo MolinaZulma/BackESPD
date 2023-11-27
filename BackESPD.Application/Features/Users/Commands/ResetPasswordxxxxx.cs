@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Identity;
 
 namespace BackESPD.Application.Features.Users.Commands
 {
-    public class ResetPassword : IRequest<GenericResponse<bool>>
+    public class ResetPasswordxxxxx : IRequest<GenericResponse<bool>>
     {
         public string Email { get; set; }
     }
 
-    internal class UpdateUsersHandler : IRequestHandler<ResetPassword, GenericResponse<bool>>
+    internal class UpdateUsersHandler : IRequestHandler<ResetPasswordxxxxx, GenericResponse<bool>>
     {
 
         private readonly UserManager<User> _userManager;
@@ -27,7 +27,7 @@ namespace BackESPD.Application.Features.Users.Commands
             _sendEmail = sendEmail;
         }
 
-        public async Task<GenericResponse<bool>> Handle(ResetPassword request, CancellationToken cancellationToken)
+        public async Task<GenericResponse<bool>> Handle(ResetPasswordxxxxx request, CancellationToken cancellationToken)
         {
             try
             {
