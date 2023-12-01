@@ -3,6 +3,7 @@ using BackESPD.Application.Features.ActivityLogsForms.Commands.DeleteActivityLog
 using BackESPD.Application.Features.ActivityLogsForms.Commands.UpdateActivityLogsForm;
 using BackESPD.Application.Features.ActivityLogsForms.Queries.GetAllActivityLogsForm;
 using BackESPD.Application.Features.ActivityLogsForms.Queries.GetByIdActivityLogsForm;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackESPDWebAPI.Controllers.v1
@@ -23,6 +24,7 @@ namespace BackESPDWebAPI.Controllers.v1
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post(CreateActivityLogsFormCommand entity)
         {
             return Ok(await Mediator.Send(entity));
