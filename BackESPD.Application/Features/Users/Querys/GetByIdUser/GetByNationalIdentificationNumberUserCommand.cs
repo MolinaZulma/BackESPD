@@ -4,6 +4,7 @@ using BackESPD.Application.Interfaces;
 using BackESPD.Application.Wrappers;
 using BackESPD.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 
 namespace BackESPD.Application.Features.Users.Querys.GetByIdUser
 {
@@ -17,21 +18,48 @@ namespace BackESPD.Application.Features.Users.Querys.GetByIdUser
         private readonly IRepositoryAsync<User> _repositoryAsync;
         private readonly IMapper _mapper;
 
-        public GetByNationalIdentificationNumberUserCommandHandler(IRepositoryAsync<User> repositoryAsync, IMapper mapper)
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+
+        public GetByNationalIdentificationNumberUserCommandHandler(IRepositoryAsync<User> repositoryAsync, IMapper mapper, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
             _repositoryAsync = repositoryAsync;
             _mapper = mapper;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public async Task<GenericResponse<UserListDTO>> Handle(GetByNationalIdentificationNumberUserCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var user = await _repositoryAsync.GetAsync(tp => tp.NationalIdentificationNumber == request.NationalIdentificationNumber);
-                if (user == null)
-                    throw new KeyNotFoundException($"User con el NationalIdentificationNumber: {request.NationalIdentificationNumber} no existe");
+                var roles = _roleManager.Roles.ToList();
 
-                return new GenericResponse<UserListDTO>(_mapper.Map<UserListDTO>(user));
+                UserListDTO userDTO = null;
+
+                foreach (var role in roles)
+                {
+                    var usersInRol = await _userManager.GetUsersInRoleAsync(role.Name);
+
+                    var user = usersInRol.FirstOrDefault(u => u.NationalIdentificationNumber == request.NationalIdentificationNumber);
+
+                    if (user != null)
+                    {
+                        userDTO = new UserListDTO
+                        {
+                            Id = user.Id,
+                            NationalIdentificationNumber = user.NationalIdentificationNumber,
+                            Email = user.Email,
+                            FullName = user.FullName,
+                            PhoneNumber = user.PhoneNumber,
+                            RoleName = role.Name,
+                        };
+
+                        break;
+                    }
+                }
+
+                return new GenericResponse<UserListDTO>(userDTO);
             }
             catch (Exception)
             {
